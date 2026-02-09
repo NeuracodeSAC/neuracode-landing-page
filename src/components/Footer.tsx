@@ -1,4 +1,4 @@
-import React from 'react'
+﻿import React from 'react'
 import Container from './Container'
 import { config } from '../config'
 
@@ -12,7 +12,7 @@ export default function Footer() {
           <div>
             <div className="font-extrabold text-xl">{config.brand.company}</div>
             <p className="mt-3 text-sm text-secondary-700">
-              Consultoría y desarrollo de sistemas. {config.brand.academy}: formación práctica para construir MVPs con lógica y criterio.
+              Neuracode: Consultoría y formación práctica. Transformamos el SDLC en una ventaja competitiva para empresas y emprendedores.
             </p>
             <div className="mt-5 flex items-center gap-3">
               <a

@@ -1,4 +1,4 @@
-const whatsappNumber = '51982859073'
+﻿const whatsappNumber = '51982859073'
 const wa = (message: string) => `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`
 
 export const config = {

@@ -1,4 +1,4 @@
-import React from 'react'
+﻿import React from 'react'
 import Container from '../components/Container'
 import Button from '../components/Button'
 import Card from '../components/Card'
@@ -97,7 +97,7 @@ export default function Home() {
                 Únete a la lista de espera y recibe acceso anticipado a la primera cohorte.
               </p>
               <div className="mt-4 flex gap-3 flex-wrap">
-                <Button href="/reto-21-dias">Ver Reto 21 dias</Button>
+                <Button href="/reto-21-dias">Ver Reto 21 días</Button>
                 <Button variant="secondary" href="/academy">Ver Academy</Button>
               </div>
             </Card>

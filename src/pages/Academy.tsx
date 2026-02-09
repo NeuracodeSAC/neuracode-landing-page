@@ -1,4 +1,4 @@
-import React from 'react'
+﻿import React from 'react'
 import Container from '../components/Container'
 import Button from '../components/Button'
 import Card from '../components/Card'
@@ -22,7 +22,14 @@ export default function Academy() {
               Del problema real al MVP funcional. Sin tutoriales inútiles. Con guía real, lógica y criterio de arquitectura.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Button href={config.links.whatsappAcademyJoin} target="_blank" rel="noreferrer">Quiero participar</Button>
+              <Button
+                href={config.links.whatsappAcademyJoin}
+                target="_blank"
+                rel="noreferrer"
+                className="bg-[#00F2FF] text-ink hover:bg-[#00D9E6]"
+              >
+                Quiero participar
+              </Button>
               <Button variant="secondary" href={config.links.whatsappAcademyInfo} target="_blank" rel="noreferrer">Quiero informacion</Button>
               <Button variant="ghost" href="/sorteo">Ver sorteo</Button>
             </div>
@@ -89,7 +96,14 @@ export default function Academy() {
                 Únete a la lista de espera. Si necesitas que lo construyamos por ti, escríbenos por WhatsApp.
               </p>
               <div className="mt-4 flex gap-3 flex-wrap">
-                <Button href={config.links.whatsappAcademyJoin} target="_blank" rel="noreferrer">Quiero participar</Button>
+                <Button
+                  href={config.links.whatsappAcademyJoin}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="bg-[#00F2FF] text-ink hover:bg-[#00D9E6]"
+                >
+                  Quiero participar
+                </Button>
                 <Button variant="secondary" href={config.links.whatsappAcademyJoin} target="_blank" rel="noreferrer">Quiero participar</Button>
               </div>
             </Card>

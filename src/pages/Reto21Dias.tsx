@@ -1,4 +1,4 @@
-import React from 'react'
+﻿import React from 'react'
 import Container from '../components/Container'
 import SectionHeading from '../components/SectionHeading'
 import Card from '../components/Card'
@@ -7,56 +7,56 @@ import { config } from '../config'
 
 const infoGeneral = [
   ['Inicio', 'Lunes 23 de febrero de 2026'],
-  ['Duracion', '21 dias (3 semanas)'],
+  ['Duración', '21 días (3 semanas)'],
   ['Modalidad', 'Online en vivo + grabaciones'],
-  ['Horario', 'Lunes a viernes - 7:00 pm a 9:00 pm (Hora Peru)'],
+  ['Horario', 'Lunes a viernes - 7:00 pm a 9:00 pm (Hora Perú)'],
   ['Total horas en vivo', '30 horas'],
-  ['Tecnologias', 'FastAPI, React, PostgreSQL'],
+  ['Tecnologías', 'FastAPI, React, PostgreSQL'],
 ]
 
 const ejemplos = [
-  'Agenda para barberia o consultorio',
-  'Inventario para almacen o tienda',
+  'Agenda para barbería o consultorio',
+  'Inventario para almacén o tienda',
   'Control de ventas para minimarket',
-  'Gestion de clientes o pedidos',
-  'Control de servicios o prestamos',
+  'Gestión de clientes o pedidos',
+  'Control de servicios o préstamos',
 ]
 
 const metodologia = [
-  'Analisis de requerimientos del negocio',
-  'Diseno del sistema y base de datos',
-  'Desarrollo backend y frontend',
+  'Análisis de requerimientos del negocio',
+  'Diseño del sistema y base de datos',
+  'Desarrollo acelerado asistido por IA: Te enseñamos a utilizar herramientas de vanguardia para optimizar la escritura de código sin sacrificar calidad ni seguridad.',
+  'Prácticas Secure by Design: Implementación de validación de datos y protección de endpoints bajo estándares de la industria desde el día 1.',
   'Pruebas y validaciones',
-  'Despliegue en produccion',
+  'Despliegue en producción (Cloud Architecture)',
   'Mejora continua',
 ]
 
 const incluye = [
-  'Sistema de autenticacion (login)',
-  'Gestion de usuarios',
-  '2-3 modulos principales del negocio',
-  'CRUD completo',
-  'Dashboard basico',
+  'Sistema de autenticación robusto (Login/Auth).',
+  'Gestión de usuarios y roles.',
+  '2-3 módulos core del negocio.',
+  'CRUD completo.',
+  'Dashboard de métricas básico.',
   'Base de datos PostgreSQL',
-  'Deploy en la nube (backend y frontend)',
+  'Despliegue automático en la nube (Cloud Architecture).',
 ]
 
 const noIncluye = [
   'ERP completo',
-  'Facturacion electronica',
-  'Sistemas contables avanzados',
-  'Integraciones complejas con terceros',
+  'Facturación electrónica compleja o sistemas contables avanzados.',
+  'Integraciones con terceros no estandarizadas.',
 ]
 
 const fases = [
   {
-    title: 'Semana 1 - Analisis y Diseno',
+    title: 'Semana 1 - Análisis y Diseño',
     items: [
-      'Definicion del problema del negocio',
+      'Definición del problema del negocio',
       'Alcance del MVP',
       'Modelado de base de datos',
       'Arquitectura del sistema',
-      'Configuracion del entorno',
+      'Configuración del entorno',
     ],
   },
   {
@@ -64,40 +64,41 @@ const fases = [
     items: [
       'Backend con FastAPI',
       'CRUD y relaciones',
-      'Autenticacion y seguridad',
+      'Autenticación y seguridad',
       'Frontend con React',
-      'Integracion API',
+      'Integración API',
     ],
   },
   {
     title: 'Semana 3 - Pruebas y Despliegue',
     items: [
       'Validaciones y pruebas',
-      'Ajustes segun el negocio',
+      'Ajustes según el negocio',
       'Deploy backend',
       'Deploy frontend',
-      'Presentacion final del sistema',
+      'Presentación final del sistema',
     ],
   },
 ]
 
 const acompanamiento = [
   'Grupo privado de soporte (WhatsApp)',
-  'Resolucion de dudas',
+  'Resolución de dudas',
   'Grabaciones de todas las sesiones',
-  'Revision grupal de avances',
+  'Revisión grupal de avances',
 ]
 
 const resultadoFinal = [
   'Sistema funcionando en internet',
-  'Codigo fuente completo',
+  'Código fuente completo',
   'Arquitectura profesional',
-  'Experiencia practica en SDLC',
-  'Base para escalar tu solucion o negocio',
+  'Documentación Técnica: Te entregamos la base necesaria para que tu solución pueda ser escalada por cualquier equipo de ingeniería en el futuro.',
+  'Experiencia práctica en SDLC',
+  'Base para escalar tu solución o negocio',
 ]
 
 const dirigidoA = [
-  'Emprendedores y duenos de negocio',
+  'Emprendedores y dueños de negocio',
   'Programadores junior o intermedios',
   'Freelancers',
   'Personas que desean digitalizar su negocio',
@@ -180,15 +181,24 @@ export default function Reto21Dias() {
               NeuraCode • Reto profesional
             </div>
             <h1 className="mt-4 text-4xl sm:text-5xl font-black tracking-tight">
-              Reto 21 Dias: Construye el sistema de tu negocio con enfoque profesional SDLC
+              Despliega un activo digital rentable en 21 días: Metodología SDLC de nivel corporativo.
             </h1>
             <p className="mt-4 max-w-3xl text-secondary-700 text-lg">
-              En 21 dias construiras un sistema web funcional para una necesidad real de tu negocio,
-              siguiendo el mismo flujo profesional usado en equipos de software.
+              Deja de construir herramientas aisladas. Crea un sistema web funcional con enfoque en ROI, seguridad y escalabilidad real.
             </p>
+            <div className="mt-5 inline-flex items-center rounded-full border border-secondary-200 bg-secondary-50 px-4 py-2 text-sm font-semibold text-ink">
+              Precio de Lanzamiento: $197 USD (Valor real $497). Solo para la cohorte de Febrero 2026.
+            </div>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Button href={config.links.whatsappRetoJoin} target="_blank" rel="noreferrer">Quiero participar en el reto</Button>
-              <Button variant="secondary" href={config.links.whatsappRetoInfo} target="_blank" rel="noreferrer">Quiero informacion</Button>
+              <Button
+                href={config.links.whatsappRetoJoin}
+                target="_blank"
+                rel="noreferrer"
+                className="bg-[#00F2FF] text-ink hover:bg-[#00D9E6]"
+              >
+                Quiero participar en el reto
+              </Button>
+              <Button variant="secondary" href={config.links.whatsappRetoInfo} target="_blank" rel="noreferrer">Quiero información</Button>
             </div>
           </div>
         </Container>
@@ -197,8 +207,8 @@ export default function Reto21Dias() {
       <section className="py-12 sm:py-14">
         <Container>
           <SectionHeading
-            eyebrow="1) Informacion general"
-            title="Fechas, horario y stack tecnologico"
+            eyebrow="1) Información general"
+            title="Fechas, horario y stack tecnológico"
           />
           <div className="mt-8 grid gap-4 md:grid-cols-2">
             {infoGeneral.map(([label, value]) => (
@@ -208,6 +218,18 @@ export default function Reto21Dias() {
               </Card>
             ))}
           </div>
+          <div className="mt-6 grid gap-4 md:grid-cols-2">
+            <Card className="border-neurablue-200 bg-neurablue-50/40">
+              <div className="text-sm text-secondary-600">Costo de agencia</div>
+              <div className="mt-2 text-2xl font-extrabold">$2,500+</div>
+              <div className="mt-2 text-sm text-secondary-700">Tiempo largo, poca flexibilidad y alto riesgo de sobrecosto.</div>
+            </Card>
+            <Card className="border-neurablue-400 bg-neurablue-100/60">
+              <div className="text-sm text-secondary-600">Reto 21 Días</div>
+              <div className="mt-2 text-2xl font-extrabold">$197</div>
+              <div className="mt-2 text-sm text-secondary-700">Metodología SDLC aplicada, ejecución guiada y resultado tangible.</div>
+            </Card>
+          </div>
         </Container>
       </section>
 
@@ -215,8 +237,8 @@ export default function Reto21Dias() {
         <Container>
           <SectionHeading
             eyebrow="2) Objetivo"
-            title="Construir un MVP real en 21 dias"
-            description="Aplicaras SDLC de punta a punta sobre un caso real de negocio."
+            title="Construir un MVP real en 21 días"
+            description="Aplicarás SDLC de punta a punta sobre un caso real de negocio."
           />
           <Card className="mt-8">
             <div className="font-semibold">Ejemplos de sistemas</div>
@@ -230,9 +252,9 @@ export default function Reto21Dias() {
       <section className="py-12 sm:py-14 border-t border-secondary-200">
         <Container>
           <SectionHeading
-            eyebrow="3) Metodologia"
+            eyebrow="3) Metodología"
             title="Proceso profesional SDLC"
-            description="Durante todo el programa aplicamos practicas Secure by Design: validacion de datos, autenticacion, proteccion de endpoints y buenas practicas de despliegue."
+            description="Durante todo el programa aplicamos prácticas Secure by Design: validación de datos, autenticación, protección de endpoints y buenas prácticas de despliegue."
           />
           <Card className="mt-8">
             <ul className="list-disc pl-5 space-y-1 text-secondary-700">
@@ -288,7 +310,7 @@ export default function Reto21Dias() {
         <Container>
           <div className="grid gap-4 lg:grid-cols-2">
             <Card>
-              <SectionHeading eyebrow="6) Acompanamiento" title="Soporte durante todo el reto" />
+              <SectionHeading eyebrow="6) Acompañamiento" title="Soporte durante todo el reto" />
               <ul className="mt-4 list-disc pl-5 space-y-1 text-secondary-700">
                 {acompanamiento.map((item) => <li key={item}>{item}</li>)}
               </ul>
@@ -382,7 +404,7 @@ export default function Reto21Dias() {
                 <input
                   name="business"
                   type="text"
-                  placeholder="Ej. restaurante, tienda, consultoría"
+                  placeholder="Ej: Gestión de inventario para mi tienda de repuestos"
                   className="h-11 rounded-xl border border-secondary-200 bg-paper px-3 text-sm focus:outline-none focus:ring-2 focus:ring-neurablue-500"
                 />
               </label>
@@ -414,7 +436,7 @@ export default function Reto21Dias() {
               </ul>
             </Card>
             <Card>
-              <SectionHeading eyebrow="9) Requisitos" title="Lo minimo para participar" />
+              <SectionHeading eyebrow="9) Requisitos" title="Lo mínimo para participar" />
               <ul className="mt-4 list-disc pl-5 space-y-1 text-secondary-700">
                 {requisitos.map((item) => <li key={item}>{item}</li>)}
               </ul>
@@ -426,7 +448,14 @@ export default function Reto21Dias() {
               Si quieres construir un sistema real para tu negocio con un proceso profesional, este reto es para ti.
             </p>
             <div className="mt-4 flex flex-wrap gap-3">
-              <Button href={config.links.whatsappRetoJoin} target="_blank" rel="noreferrer">Quiero participar en el reto</Button>
+              <Button
+                href={config.links.whatsappRetoJoin}
+                target="_blank"
+                rel="noreferrer"
+                className="bg-[#00F2FF] text-ink hover:bg-[#00D9E6]"
+              >
+                Quiero participar en el reto
+              </Button>
               <Button variant="secondary" href={config.links.whatsappRetoJoin} target="_blank" rel="noreferrer">Quiero participar en el reto</Button>
             </div>
           </Card>
