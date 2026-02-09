@@ -4,3 +4,18 @@
 
 :root { color-scheme: light; }
 ::selection { @apply bg-neurablue-200 text-ink; }
+
+/* Desktop scale-up */
+@media (min-width: 1024px) {
+  html { font-size: 17.5px; }
+}
+@media (min-width: 1280px) {
+  html { font-size: 18px; }
+}
+@media (min-width: 1536px) {
+  html { font-size: 19px; }
+}
+
+.wa-float {
+  transition: transform 0.15s ease;
+}

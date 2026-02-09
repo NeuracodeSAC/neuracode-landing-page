@@ -6,7 +6,7 @@ export const config = {
     company: 'NeuraCode',
     academy: 'NeuraCode Academy',
     tagline: 'Construimos sistemas reales.',
-    logoSrc: '/logo-neuracode.png',
+    logoSrc: '/logo-neuracodee.png',
   },
   links: {
     whatsapp: wa('Hola NeuraCode, quiero informacion general.'),
@@ -14,6 +14,9 @@ export const config = {
     whatsappAcademyJoin: wa('Hola NeuraCode, quiero participar en la Academy.'),
     whatsappRetoInfo: wa('Hola NeuraCode, quiero informacion del Reto 21 Dias.'),
     whatsappRetoJoin: wa('Hola NeuraCode, quiero participar en el Reto 21 Dias.'),
+    retoFormAction: 'https://formspree.io/f/REEMPLAZA_ID',
+    giveawayInstagram: '#',
+    giveawayFacebook: '#',
     checkout: '#',
     instagram: 'https://www.instagram.com/neuracode.dev/',
     facebook: 'https://www.facebook.com/neuracode',

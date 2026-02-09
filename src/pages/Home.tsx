@@ -14,15 +14,15 @@ export default function Home() {
   return (
     <div>
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(46,118,229,0.20),transparent_55%)]" />
+        <div className="absolute inset-0 -z-10 pointer-events-none bg-[radial-gradient(circle_at_top,rgba(46,118,229,0.20),transparent_55%)]" />
         <Container>
-          <div className="py-16 sm:py-24 grid gap-10 lg:grid-cols-2 items-center">
+          <div className="py-14 sm:py-24 grid gap-10 lg:grid-cols-2 items-center">
             <div>
               <div className="inline-flex items-center gap-2 rounded-full border border-secondary-200 bg-paper px-3 py-1 text-xs text-secondary-700">
                 <span className="h-2 w-2 rounded-full bg-purple-500"></span>
                 NeuraCode • Consultoría y desarrollo
               </div>
-              <h1 className="mt-4 text-4xl sm:text-5xl font-black tracking-tight">
+              <h1 className="mt-4 text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight">
                 Construimos <span className="text-neurablue-700">sistemas reales</span> para negocios reales.
               </h1>
               <p className="mt-4 text-secondary-700 text-lg">
@@ -60,7 +60,7 @@ export default function Home() {
         </Container>
       </section>
 
-      <section className="py-14 border-t border-secondary-200">
+      <section className="py-12 sm:py-14 border-t border-secondary-200">
         <Container>
           <SectionHeading
             eyebrow="Cómo trabajamos"
@@ -83,7 +83,7 @@ export default function Home() {
         </Container>
       </section>
 
-      <section className="py-14 border-t border-secondary-200">
+      <section className="py-12 sm:py-14 border-t border-secondary-200">
         <Container>
           <div className="grid gap-8 lg:grid-cols-2 items-start">
             <SectionHeading

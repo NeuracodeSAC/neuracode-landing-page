@@ -9,9 +9,9 @@ export default function Academy() {
   return (
     <div>
       <section className="relative overflow-hidden border-b border-secondary-200">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(46,118,229,0.18),transparent_55%)]" />
+        <div className="absolute inset-0 -z-10 pointer-events-none bg-[radial-gradient(circle_at_top,rgba(46,118,229,0.18),transparent_55%)]" />
         <Container>
-          <div className="py-16 sm:py-20">
+          <div className="py-14 sm:py-20">
             <div className="inline-flex items-center gap-2 rounded-full border border-secondary-200 bg-paper px-3 py-1 text-xs text-secondary-700">
               NeuraCode Academy • Reto
             </div>
@@ -30,7 +30,7 @@ export default function Academy() {
         </Container>
       </section>
 
-      <section className="py-14">
+      <section className="py-12 sm:py-14">
         <Container>
           <SectionHeading
             eyebrow="Qué logra el reto"
@@ -53,7 +53,7 @@ export default function Academy() {
         </Container>
       </section>
 
-      <section className="py-14 border-t border-secondary-200">
+      <section className="py-12 sm:py-14 border-t border-secondary-200">
         <Container>
           <SectionHeading
             eyebrow="Diferenciador"
@@ -75,7 +75,7 @@ export default function Academy() {
         </Container>
       </section>
 
-      <section className="py-14 border-t border-secondary-200">
+      <section className="py-12 sm:py-14 border-t border-secondary-200">
         <Container>
           <div className="grid gap-6 lg:grid-cols-2 items-start">
             <SectionHeading
