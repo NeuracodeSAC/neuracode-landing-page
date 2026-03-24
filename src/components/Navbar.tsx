@@ -50,6 +50,7 @@ export default function Navbar() {
             <NavItem to="/academy">Academy</NavItem>
             <NavItem to="/reto-21-dias">Reto</NavItem>
             <NavItem to="/sorteo">Sorteo</NavItem>
+            <NavItem to="/comunidad">Comunidad</NavItem>
           </nav>
 
           <div className="flex items-center gap-2">
@@ -72,6 +73,7 @@ export default function Navbar() {
             <NavItem to="/academy" onClick={() => setMenuOpen(false)}>Academy</NavItem>
             <NavItem to="/reto-21-dias" onClick={() => setMenuOpen(false)}>Reto</NavItem>
             <NavItem to="/sorteo" onClick={() => setMenuOpen(false)}>Sorteo</NavItem>
+            <NavItem to="/comunidad" onClick={() => setMenuOpen(false)}>Comunidad</NavItem>
           </nav>
         </div>
       </Container>
