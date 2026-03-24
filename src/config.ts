@@ -2,6 +2,16 @@
 const wa = (message: string) => `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`
 
 export const config = {
+  brevo: {
+    apiKey: import.meta.env.VITE_BREVO_API_KEY as string || '',
+    listId: import.meta.env.VITE_BREVO_LIST_ID as string || '',
+  },
+  formspree: {
+    id: import.meta.env.VITE_FORMSPREE_ID as string || '',
+  },
+  pdfGuideUrl: import.meta.env.VITE_PDF_GUIDE_URL as string || '',
+  metaPixelId: import.meta.env.VITE_META_PIXEL_ID as string || '',
+  ga4MeasurementId: import.meta.env.VITE_GA4_MEASUREMENT_ID as string || '',
   brand: {
     company: 'NeuraCode',
     academy: 'NeuraCode Academy',

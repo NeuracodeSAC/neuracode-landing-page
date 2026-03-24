@@ -58,6 +58,7 @@ export default function Footer() {
               <li><a className="hover:text-ink" href="/academy">NeuraCode Academy</a></li>
               <li><a className="hover:text-ink" href="/reto-21-dias">Reto 21 días</a></li>
               <li><a className="hover:text-ink" href="/sorteo">Sorteo</a></li>
+              <li><a className="hover:text-ink" href="/comunidad">Comunidad</a></li>
             </ul>
           </div>
 
