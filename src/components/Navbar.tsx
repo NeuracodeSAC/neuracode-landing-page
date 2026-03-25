@@ -50,14 +50,25 @@ export default function Navbar() {
             <NavItem to="/live">
               <span className="flex items-center gap-1.5">
                 <span className="h-1.5 w-1.5 rounded-full bg-red-500 animate-pulse" aria-hidden="true" />
-                Lives
+                Live
               </span>
             </NavItem>
-            <NavItem to="/comunidad">Guía gratis</NavItem>
+            <NavItem to="/comunidad">Comunidad</NavItem>
           </nav>
 
           <div className="flex items-center gap-2">
-            <Button className="px-3 sm:px-4 text-xs sm:text-sm" href={config.links.whatsapp} target="_blank" rel="noreferrer">WhatsApp</Button>
+            {config.zoomLink && !config.zoomLink.includes('TODO') && (
+              <a
+                href={config.zoomLink}
+                target="_blank"
+                rel="noreferrer"
+                className="hidden sm:inline-flex items-center gap-1.5 rounded-xl bg-red-500 hover:bg-red-600 text-white px-3 py-2 text-xs font-bold transition"
+              >
+                <span className="h-1.5 w-1.5 rounded-full bg-white animate-pulse" />
+                EN VIVO HOY 8PM
+              </a>
+            )}
+            <Button className="px-3 sm:px-4 text-xs sm:text-sm" href={config.links.whatsappComunidad} target="_blank" rel="noreferrer">WhatsApp</Button>
             <button
               type="button"
               className="md:hidden inline-flex items-center justify-center h-10 w-10 rounded-xl border border-secondary-200 text-secondary-700 hover:bg-secondary-50"
@@ -73,8 +84,20 @@ export default function Navbar() {
         <div className={menuOpen ? 'md:hidden pb-4' : 'md:hidden hidden'}>
           <nav className="flex flex-col gap-3 border-t border-secondary-200 pt-4">
             <NavItem to="/" onClick={() => setMenuOpen(false)}>Inicio</NavItem>
-            <NavItem to="/live" onClick={() => setMenuOpen(false)}>Lives</NavItem>
-            <NavItem to="/comunidad" onClick={() => setMenuOpen(false)}>Guía gratis</NavItem>
+            <NavItem to="/live" onClick={() => setMenuOpen(false)}>Live</NavItem>
+            <NavItem to="/comunidad" onClick={() => setMenuOpen(false)}>Comunidad</NavItem>
+            {config.zoomLink && !config.zoomLink.includes('TODO') && (
+              <a
+                href={config.zoomLink}
+                target="_blank"
+                rel="noreferrer"
+                onClick={() => setMenuOpen(false)}
+                className="inline-flex items-center gap-1.5 rounded-xl bg-red-500 text-white px-3 py-2 text-xs font-bold"
+              >
+                <span className="h-1.5 w-1.5 rounded-full bg-white animate-pulse" />
+                EN VIVO HOY 8PM — Entrar al Zoom
+              </a>
+            )}
           </nav>
         </div>
       </Container>
