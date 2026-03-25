@@ -46,11 +46,14 @@ export default function Navbar() {
           </NavLink>
 
           <nav className="hidden md:flex items-center gap-6">
-            <NavItem to="/">Empresa</NavItem>
-            <NavItem to="/academy">Academy</NavItem>
-            <NavItem to="/reto-21-dias">Reto</NavItem>
-            <NavItem to="/sorteo">Sorteo</NavItem>
-            <NavItem to="/comunidad">Comunidad</NavItem>
+            <NavItem to="/">Inicio</NavItem>
+            <NavItem to="/live">
+              <span className="flex items-center gap-1.5">
+                <span className="h-1.5 w-1.5 rounded-full bg-red-500 animate-pulse" aria-hidden="true" />
+                Lives
+              </span>
+            </NavItem>
+            <NavItem to="/comunidad">Guía gratis</NavItem>
           </nav>
 
           <div className="flex items-center gap-2">
@@ -69,11 +72,9 @@ export default function Navbar() {
 
         <div className={menuOpen ? 'md:hidden pb-4' : 'md:hidden hidden'}>
           <nav className="flex flex-col gap-3 border-t border-secondary-200 pt-4">
-            <NavItem to="/" onClick={() => setMenuOpen(false)}>Empresa</NavItem>
-            <NavItem to="/academy" onClick={() => setMenuOpen(false)}>Academy</NavItem>
-            <NavItem to="/reto-21-dias" onClick={() => setMenuOpen(false)}>Reto</NavItem>
-            <NavItem to="/sorteo" onClick={() => setMenuOpen(false)}>Sorteo</NavItem>
-            <NavItem to="/comunidad" onClick={() => setMenuOpen(false)}>Comunidad</NavItem>
+            <NavItem to="/" onClick={() => setMenuOpen(false)}>Inicio</NavItem>
+            <NavItem to="/live" onClick={() => setMenuOpen(false)}>Lives</NavItem>
+            <NavItem to="/comunidad" onClick={() => setMenuOpen(false)}>Guía gratis</NavItem>
           </nav>
         </div>
       </Container>

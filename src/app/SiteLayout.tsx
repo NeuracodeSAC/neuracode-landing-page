@@ -5,7 +5,7 @@ import Footer from '../components/Footer'
 import { config } from '../config'
 
 export default function SiteLayout() {
-  const [showGiveaway, setShowGiveaway] = React.useState(true)
+  const [showGiveaway, setShowGiveaway] = React.useState(false)
   const [slideIndex, setSlideIndex] = React.useState(1)
 
   React.useEffect(() => {

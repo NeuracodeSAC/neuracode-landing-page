@@ -7,6 +7,7 @@ import Giveaway from '../pages/Giveaway'
 import Reto21Dias from '../pages/Reto21Dias'
 import Comunidad from '../pages/Comunidad'
 import ComunidadGracias from '../pages/ComunidadGracias'
+import Live from '../pages/Live'
 import NotFound from '../pages/NotFound'
 
 export default function App() {
@@ -19,6 +20,7 @@ export default function App() {
         <Route path="/sorteo" element={<Giveaway />} />
         <Route path="/comunidad" element={<Comunidad />} />
         <Route path="/comunidad/gracias" element={<ComunidadGracias />} />
+        <Route path="/live" element={<Live />} />
         <Route path="/404" element={<NotFound />} />
         <Route path="*" element={<Navigate to="/404" replace />} />
       </Route>
