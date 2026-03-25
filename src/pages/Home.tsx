@@ -31,7 +31,7 @@ function Hero() {
         <div className="py-16 sm:py-24 max-w-3xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 rounded-full border border-neurablue-200 bg-neurablue-50 px-3 py-1 text-xs text-neurablue-700 font-medium">
             <span className="h-2 w-2 rounded-full bg-neurablue-500 animate-pulse" />
-            Lives gratis · Lun · Mié · Vie · 8PM Peru
+            Live gratis · Miércoles 8PM Peru
           </div>
 
           <h1 className="mt-5 text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.08]">
@@ -48,7 +48,7 @@ function Hero() {
 
           <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
             <Button href="/comunidad">
-              Descarga la guía gratis — 10 Prompts Esenciales
+              Descarga los prompts del live — gratis
             </Button>
             <Button
               variant="secondary"
@@ -128,8 +128,8 @@ const PRODUCTOS = [
   {
     badge: 'GRATIS',
     badgeColor: 'bg-green-100 text-green-700',
-    nombre: 'Lives semanales',
-    descripcion: 'Demos en vivo de IA aplicada a tu trabajo. Lun · Mié · Vie 8PM Peru.',
+    nombre: 'Live semanal',
+    descripcion: 'Demos en vivo de IA aplicada a tu trabajo. Miércoles 8PM Peru por Zoom.',
     cta: 'Unirme al próximo live',
     href: '/live',
     interno: true,
@@ -137,8 +137,8 @@ const PRODUCTOS = [
   {
     badge: 'GRATIS',
     badgeColor: 'bg-green-100 text-green-700',
-    nombre: 'Guía: 10 Prompts Esenciales',
-    descripcion: '10 prompts listos para usar en contabilidad, marketing, HR y operaciones.',
+    nombre: 'Prompts del live + guía por profesión',
+    descripcion: 'Los prompts exactos que usamos en cada live + 7 adicionales para tu rol.',
     cta: 'Descargar gratis',
     href: '/comunidad',
     interno: true,
@@ -147,7 +147,7 @@ const PRODUCTOS = [
     badge: 'GRATIS',
     badgeColor: 'bg-green-100 text-green-700',
     nombre: 'Workshop quincenal',
-    descripcion: '"Tu Primera Hora Productiva con IA" — 90 min hands-on por Zoom.',
+    descripcion: '"Automatiza tu Primera Tarea con IA en 60 Minutos" — hands-on por Zoom.',
     cta: 'Registrarme',
     href: config.links.whatsappComunidad,
     interno: false,
@@ -155,9 +155,9 @@ const PRODUCTOS = [
   {
     badge: 'S/ 29',
     badgeColor: 'bg-neurablue-100 text-neurablue-700',
-    nombre: 'Mini-Curso: IA para tu Trabajo',
-    descripcion: '5 módulos de video: prompts, documentos, emails y análisis de datos sin programar.',
-    cta: 'Ver más',
+    nombre: 'Elimina 10 Horas de Trabajo Manual con IA',
+    descripcion: '5 módulos de video: reportes, emails, documentos y análisis — sin programar.',
+    cta: 'Próximamente',
     href: config.links.whatsappAcademyInfo,
     interno: false,
   },
@@ -310,7 +310,7 @@ function RedesSociales() {
             Contenido de IA todos los días
           </h2>
           <p className="mt-2 text-secondary-700 text-sm">
-            3 reels + 3 lives por semana en TikTok e Instagram.
+            5 reels + 1 live por semana en TikTok e Instagram.
           </p>
 
           <div className="mt-6 flex items-center justify-center gap-3">

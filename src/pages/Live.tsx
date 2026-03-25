@@ -25,14 +25,14 @@ export default function Live() {
           <div className="py-14 sm:py-20 text-center max-w-2xl mx-auto">
             <div className="inline-flex items-center gap-2 rounded-full bg-red-100 text-red-700 px-3 py-1 text-xs font-semibold">
               <span className="h-2 w-2 rounded-full bg-red-500 animate-pulse" />
-              Lives en vivo · 3 veces por semana
+              Live en vivo · Cada miércoles 8PM
             </div>
             <h1 className="mt-4 text-4xl sm:text-5xl font-black tracking-tight">
               IA aplicada en vivo,<br />
               <span className="text-purple-500">con demos reales</span>
             </h1>
             <p className="mt-4 text-secondary-700 text-lg leading-relaxed">
-              Cada semana mostramos cómo usar IA para resolver problemas reales de trabajo.
+              Cada miércoles a las 8PM mostramos cómo usar IA para resolver problemas reales de trabajo.
               Sin teoría. Sin programar. Solo pantalla compartida y resultados en segundos.
             </p>
             <p className="mt-3 font-semibold text-neurablue-600">

@@ -21,14 +21,14 @@ export const config = {
     email: 'contact@neuracode.dev',
   },
   live: {
-    schedule: 'Lun · Mié · Vie — 8:00 PM (hora Perú)',
-    nextDate: 'Miércoles 26 de marzo · 8:00 PM',
-    topic: 'IA Práctica para tu Trabajo',
+    schedule: 'Miércoles — 8:00 PM (hora Perú)',
+    nextDate: 'HOY Miércoles 25 de marzo · 8:00 PM',
+    topic: 'Demo EN VIVO: IA que Hace tu Excel, Emails y Reportes en Segundos',
   },
   upcomingLives: [
-    { dia: 'Miércoles', fecha: '26 marzo', hora: '8:00 PM', tema: 'IA Práctica para tu Trabajo', esProximo: true },
-    { dia: 'Viernes',   fecha: '28 marzo', hora: '8:00 PM', tema: 'Q&A: Resolvemos tus casos con IA en vivo', esProximo: false },
-    { dia: 'Lunes',     fecha: '31 marzo', hora: '8:00 PM', tema: 'Excel + IA: de 2 horas a 5 minutos', esProximo: false },
+    { dia: 'Miércoles', fecha: '25 marzo', hora: '8:00 PM', tema: 'Demo EN VIVO: IA que Hace tu Excel, Emails y Reportes en Segundos', esProximo: true },
+    { dia: 'Miércoles', fecha: '1 abril', hora: '8:00 PM', tema: 'IA para Emails y Comunicación Profesional', esProximo: false },
+    { dia: 'Miércoles', fecha: '8 abril', hora: '8:00 PM', tema: 'Caso Real: Automatización con IA en una PYME', esProximo: false },
   ],
   links: {
     whatsapp: wa('Hola NeuraCode, quiero informacion general.'),
@@ -36,9 +36,9 @@ export const config = {
     whatsappAgencia: wa('Hola NeuraCode, quiero un diagnostico gratuito para mi negocio.'),
     whatsappAcademyInfo: wa('Hola NeuraCode, quiero informacion de la Academy.'),
     whatsappAcademyJoin: wa('Hola NeuraCode, quiero participar en la Academy.'),
-    whatsappRetoInfo: wa('Hola NeuraCode, quiero informacion del Reto 21 Dias.'),
-    whatsappRetoJoin: wa('Hola NeuraCode, quiero participar en el Reto 21 Dias.'),
-    retoFormAction: import.meta.env.VITE_FORMSPREE_RETO_ID ? `https://formspree.io/f/${import.meta.env.VITE_FORMSPREE_RETO_ID}` : '',
+    whatsappRetoInfo: wa('Hola NeuraCode, quiero informacion del mini-curso de IA.'),
+    whatsappRetoJoin: wa('Hola NeuraCode, quiero inscribirme en el mini-curso de IA.'),
+    retoFormAction: '',
     giveawayInstagram: '#',
     giveawayFacebook: '#',
     checkout: '#',
@@ -47,10 +47,10 @@ export const config = {
     tiktok: 'https://www.tiktok.com/@jackdeneuracode',
   },
   giveaway: {
-    dateLabel: '11 de marzo',
+    dateLabel: 'Próximamente',
     prizes: {
-      tech: 'Amazon Alexa Echo Dot',
-      mentoring: 'Mentoría Estratégica 1-a-1 (Diseño de Sistema y MVP)',
+      tech: 'Por anunciar',
+      mentoring: 'Por anunciar',
     }
   }
 }
