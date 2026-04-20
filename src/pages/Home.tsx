@@ -114,13 +114,32 @@ function AuditoriaHero() {
                   Ver análisis completo →
                 </Link>
                 <a
-                  href="https://jackthony.github.io/auditoria-eg2026/"
+                  href="https://jackthony.github.io/auditoria-eg2026/dashboard/"
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex items-center justify-center rounded-2xl border border-secondary-200 bg-white hover:bg-secondary-50 text-secondary-800 px-5 py-3 text-sm font-semibold transition"
                 >
                   Dashboard en vivo
                 </a>
+              </div>
+
+              <div className="mt-4 flex flex-wrap gap-2">
+                {[
+                  { label: 'Chat Tía María', href: 'https://jackthony.github.io/auditoria-eg2026/chat/' },
+                  { label: 'La historia', href: 'https://jackthony.github.io/auditoria-eg2026/historia/' },
+                  { label: 'Memorial PDF', href: 'https://jackthony.github.io/auditoria-eg2026/MEMORIAL_TECNICO_FISCAL.pdf' },
+                  { label: 'GitHub', href: 'https://github.com/jackthony/auditoria-eg2026' },
+                ].map((l) => (
+                  <a
+                    key={l.label}
+                    href={l.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-xs font-semibold text-red-700 underline underline-offset-2 hover:text-red-900 transition"
+                  >
+                    {l.label}
+                  </a>
+                ))}
               </div>
 
               <p className="mt-4 text-xs text-secondary-500">

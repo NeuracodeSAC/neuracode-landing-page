@@ -2,9 +2,48 @@ import React from 'react'
 import Container from '../components/Container'
 import Button from '../components/Button'
 
-const DASHBOARD_URL = 'https://jackthony.github.io/auditoria-eg2026/'
+const BASE_URL = 'https://jackthony.github.io/auditoria-eg2026'
+const DASHBOARD_URL = BASE_URL + '/dashboard/'
+const CHAT_URL = BASE_URL + '/chat/'
+const HISTORIA_URL = BASE_URL + '/historia/'
+const MEMORIAL_URL = BASE_URL + '/MEMORIAL_TECNICO_FISCAL.pdf'
 const REPO_URL = 'https://github.com/jackthony/auditoria-eg2026'
 const ACADEMY_URL = '/comunidad'
+
+const PUERTAS = [
+  {
+    titulo: 'Dashboard en vivo',
+    desc: 'Tests, mapas interactivos, forecast bayesiano y findings en tiempo real. Se actualiza cada 15 min.',
+    href: DASHBOARD_URL,
+    cta: 'Abrir dashboard →',
+    tag: 'EN VIVO',
+    tagColor: 'bg-green-100 text-green-700',
+  },
+  {
+    titulo: 'El chat de la Tía María',
+    desc: 'Le expliqué a mi tía qué pasó con las elecciones. Aquí está la conversación completa. En 2 minutos entiendes todo.',
+    href: CHAT_URL,
+    cta: 'Leer el chat →',
+    tag: 'VIRAL',
+    tagColor: 'bg-yellow-100 text-yellow-700',
+  },
+  {
+    titulo: 'La historia',
+    desc: 'Narrativa escénica: cómo 4,703 mesas cambian el 2° puesto. Con contador animado, mapa de puntos y tabla comparativa.',
+    href: HISTORIA_URL,
+    cta: 'Ver la historia →',
+    tag: 'EDITORIAL',
+    tagColor: 'bg-purple-100 text-purple-700',
+  },
+  {
+    titulo: 'Memorial técnico al Fiscal',
+    desc: 'Pieza técnica referenciable: hipótesis, método, hallazgos y cadena de custodia SHA-256. Para abogados e investigadores.',
+    href: MEMORIAL_URL,
+    cta: 'Descargar PDF →',
+    tag: 'PDF',
+    tagColor: 'bg-secondary-100 text-secondary-700',
+  },
+]
 
 const STATS = [
   {
@@ -160,6 +199,36 @@ export default function Auditoria() {
             <p className="mt-6 text-sm text-secondary-500 max-w-2xl">
               Señales exploratorias (Benford, Moran's I, ML-anomalías) en <a href={REPO_URL + '/blob/main/docs/EXPLORATORIO.md'} target="_blank" rel="noreferrer" className="text-neurablue-600 underline">docs/EXPLORATORIO.md</a>. Requieren corrección de múltiples tests y peer-review.
             </p>
+          </div>
+        </Container>
+      </section>
+
+      {/* 4 Puertas */}
+      <section className="border-b border-secondary-200">
+        <Container>
+          <div className="py-14 sm:py-20">
+            <p className="text-xs font-bold uppercase tracking-widest text-red-700 mb-2">Cuatro puertas</p>
+            <h2 className="text-3xl sm:text-4xl font-black tracking-tight mb-8">Elige cómo entrar al análisis</h2>
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              {PUERTAS.map((p) => (
+                <a
+                  key={p.titulo}
+                  href={p.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="group flex flex-col rounded-2xl border border-secondary-200 bg-white p-5 hover:border-secondary-400 hover:shadow-sm transition"
+                >
+                  <span className={`self-start text-xs font-bold px-2 py-0.5 rounded-full mb-3 ${p.tagColor}`}>
+                    {p.tag}
+                  </span>
+                  <h3 className="font-black text-base leading-snug text-secondary-900 group-hover:text-red-700 transition">
+                    {p.titulo}
+                  </h3>
+                  <p className="mt-2 text-sm text-secondary-600 leading-relaxed flex-1">{p.desc}</p>
+                  <div className="mt-4 text-sm font-bold text-red-700">{p.cta}</div>
+                </a>
+              ))}
+            </div>
           </div>
         </Container>
       </section>
