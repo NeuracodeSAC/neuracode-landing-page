@@ -6,6 +6,7 @@ import Academy from '../pages/Academy'
 import Comunidad from '../pages/Comunidad'
 import ComunidadGracias from '../pages/ComunidadGracias'
 import Live from '../pages/Live'
+import Auditoria from '../pages/Auditoria'
 import NotFound from '../pages/NotFound'
 
 export default function App() {
@@ -19,6 +20,7 @@ export default function App() {
         <Route path="/comunidad" element={<Comunidad />} />
         <Route path="/comunidad/gracias" element={<ComunidadGracias />} />
         <Route path="/live" element={<Live />} />
+        <Route path="/auditoria" element={<Auditoria />} />
         <Route path="/404" element={<NotFound />} />
         <Route path="*" element={<Navigate to="/404" replace />} />
       </Route>
