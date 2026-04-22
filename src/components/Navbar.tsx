@@ -54,16 +54,6 @@ export default function Navbar() {
               </span>
             </NavItem>
             <NavItem to="/comunidad">Comunidad</NavItem>
-            <NavLink
-              to="/auditoria"
-              className={({ isActive }) =>
-                'text-sm font-bold transition inline-flex items-center gap-1.5 ' +
-                (isActive ? 'text-red-700' : 'text-red-600 hover:text-red-800')
-              }
-            >
-              <span className="h-1.5 w-1.5 rounded-full bg-red-500 animate-pulse" aria-hidden="true" />
-              Auditoría EG2026
-            </NavLink>
           </nav>
 
           <div className="flex items-center gap-2">
@@ -96,17 +86,6 @@ export default function Navbar() {
             <NavItem to="/" onClick={() => setMenuOpen(false)}>Inicio</NavItem>
             <NavItem to="/live" onClick={() => setMenuOpen(false)}>Live</NavItem>
             <NavItem to="/comunidad" onClick={() => setMenuOpen(false)}>Comunidad</NavItem>
-            <NavLink
-              to="/auditoria"
-              onClick={() => setMenuOpen(false)}
-              className={({ isActive }) =>
-                'text-sm font-bold transition inline-flex items-center gap-1.5 ' +
-                (isActive ? 'text-red-700' : 'text-red-600 hover:text-red-800')
-              }
-            >
-              <span className="h-1.5 w-1.5 rounded-full bg-red-500 animate-pulse" aria-hidden="true" />
-              Auditoría EG2026
-            </NavLink>
             {config.zoomLink && !config.zoomLink.includes('TODO') && (
               <a
                 href={config.zoomLink}

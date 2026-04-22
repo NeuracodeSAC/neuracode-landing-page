@@ -69,91 +69,6 @@ function Hero() {
   )
 }
 
-// ── Section: Auditoría EG2026 (Hero block) ────────────────────────────────
-
-function AuditoriaHero() {
-  return (
-    <section className="relative overflow-hidden border-b border-secondary-200 bg-[#faf7f2]">
-      <div className="absolute inset-0 -z-10 pointer-events-none bg-[radial-gradient(ellipse_at_top_right,rgba(176,23,31,0.09),transparent_60%)]" />
-      <Container>
-        <div className="py-14 sm:py-20">
-          <div className="flex flex-col lg:flex-row gap-10 items-start">
-
-            <div className="flex-1 max-w-2xl">
-              <div className="inline-flex items-center gap-2 rounded-full bg-red-100 text-red-700 px-3 py-1 text-xs font-bold uppercase tracking-widest">
-                <span className="h-2 w-2 rounded-full bg-red-600 animate-pulse" />
-                Análisis en vivo · Neuracode
-              </div>
-
-              <h2 className="mt-4 text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.02]">
-                Algo no{' '}
-                <span style={{ fontFamily: 'Georgia, serif', fontStyle: 'italic' }}>cuadra.</span>
-              </h2>
-
-              <p className="mt-4 text-base sm:text-lg text-secondary-800 leading-relaxed">
-                Auditamos mesa por mesa el escrutinio ONPE de las{' '}
-                <strong>Elecciones Generales 2026</strong>. SHA-256 por captura.
-                Código abierto. Cualquiera puede verificarlo.
-              </p>
-
-              <div className="mt-6 grid grid-cols-3 gap-3">
-                {[
-                  { v: '4,703', l: 'mesas faltantes' },
-                  { v: '566K', l: 'votos sin cuadrar' },
-                  { v: '13,624', l: 'votos decide 2° puesto' },
-                ].map((s) => (
-                  <div key={s.l} className="rounded-xl bg-white border border-secondary-200 p-3 text-center">
-                    <div className="text-2xl sm:text-3xl font-black text-red-700 leading-none">{s.v}</div>
-                    <div className="mt-1 text-xs text-secondary-600 leading-tight">{s.l}</div>
-                  </div>
-                ))}
-              </div>
-
-              <div className="mt-6 flex flex-col sm:flex-row gap-3">
-                <Link to="/auditoria" className="inline-flex items-center justify-center rounded-2xl bg-red-700 hover:bg-red-800 text-white px-5 py-3 text-sm font-bold transition">
-                  Ver análisis completo →
-                </Link>
-                <a
-                  href="https://jackthony.github.io/auditoria-eg2026/dashboard/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center justify-center rounded-2xl border border-secondary-200 bg-white hover:bg-secondary-50 text-secondary-800 px-5 py-3 text-sm font-semibold transition"
-                >
-                  Dashboard en vivo
-                </a>
-              </div>
-
-              <div className="mt-4 flex flex-wrap gap-2">
-                {[
-                  { label: 'Chat Tía María', href: 'https://jackthony.github.io/auditoria-eg2026/chat/' },
-                  { label: 'La historia', href: 'https://jackthony.github.io/auditoria-eg2026/historia/' },
-                  { label: 'Memorial PDF', href: 'https://jackthony.github.io/auditoria-eg2026/MEMORIAL_TECNICO_FISCAL.pdf' },
-                  { label: 'GitHub', href: 'https://github.com/jackthony/auditoria-eg2026' },
-                ].map((l) => (
-                  <a
-                    key={l.label}
-                    href={l.href}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-xs font-semibold text-red-700 underline underline-offset-2 hover:text-red-900 transition"
-                  >
-                    {l.label}
-                  </a>
-                ))}
-              </div>
-
-              <p className="mt-4 text-xs text-secondary-500">
-                Por <strong>Neuracode</strong> · Coautoría: Jack Aguilar · Sin afiliación política
-              </p>
-            </div>
-
-          </div>
-        </div>
-      </Container>
-    </section>
-  )
-}
-
 // ── Section: Para quién ────────────────────────────────────────────────────
 
 const PERFILES = [
@@ -447,7 +362,6 @@ export default function Home() {
   return (
     <div>
       <Hero />
-      <AuditoriaHero />
       <ParaQuien />
       <QueAprenderas />
       <ProximoLive />
