@@ -1,0 +1,74 @@
+version: '3.0'
+display_policy: selective_not_laundry_list
+groups:
+- id: software
+  label: Software & APIs
+  items:
+  - .NET
+  - Python
+  - FastAPI
+  - TypeScript
+  - Java
+  - REST APIs
+  - Microservices
+  - Distributed systems
+  - Clean Architecture
+  - Angular
+- id: ai_agentic
+  label: AI & Agentic
+  items:
+  - Anthropic / Claude
+  - OpenAI
+  - Codex
+  - AWS Bedrock
+  - LangChain
+  - LangGraph
+  - MCP
+  - Skills
+  - Tools / function calling
+  - RAG
+  - Agentic workflows
+  - HITL
+  - Evaluations
+  - Observability
+  - LangSmith
+  - RAGAS
+- id: data
+  label: Data & Analytics
+  items:
+  - Power BI
+  - PostgreSQL
+  - SQL Server
+  - Pentaho
+  - Data Warehouse
+  - Data Lake
+  - Kimball
+  - Elasticsearch
+  - Forecasting
+  - Machine Learning
+  - NLP
+  - pgvector
+  - Supabase
+  - FAISS
+  - Pinecone
+- id: cloud_security_delivery
+  label: Cloud, Security & Delivery
+  items:
+  - AWS
+  - ECS Fargate
+  - API Gateway
+  - ALB
+  - VPC
+  - Secrets Manager
+  - Lambda
+  - S3
+  - RDS
+  - Docker
+  - IAM least privilege
+  - OAuth2
+  - JWT
+  - OWASP
+  - Thales PayShield HSM
+  - CI/CD
+  - SAST/DAST
+  - Secure SDLC

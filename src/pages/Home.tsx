@@ -7,10 +7,10 @@ import { capabilities, principles, primaryEcosystems, technicalEcosystems } from
 import { whatsappUrl } from '../config'
 
 export default function Home() {
-  return <><PageMeta path="/" title="Neuracode — IA, automatización y software con criterio" description="Diseñamos, implementamos y enseñamos soluciones de IA, automatización y software para problemas reales de negocio." />
+  return <><PageMeta path="/" title="Neuracode | Consultoría de IA, Automatización y Agentes" description="Diseñamos e implementamos automatización con IA, agentes, analítica y software para empresas. Discovery, pilotos, integración, evaluación y formación." />
     <section className="hero"><Container><div className="hero-grid"><div>
-      <p className="eyebrow">Neuracode · Enterprise + Academy</p><h1>IA y software para resolver <span>problemas reales de negocio.</span></h1>
-      <p className="hero-copy">Neuracode diseña e implementa automatizaciones, agentes y soluciones basadas en LLMs, datos y software, desde discovery y pilotos hasta integración, operación y adopción.</p>
+      <p className="eyebrow">Neuracode · Enterprise + Academy</p><h1>Integramos IA en <span>procesos reales de negocio.</span></h1>
+      <p className="hero-copy">Diseñamos e implementamos automatizaciones, agentes, analítica y software con IA, desde discovery y pilotos hasta integración, evaluación y operación.</p>
       <div className="actions"><Button href={whatsappUrl('proyecto')} target="_blank" rel="noreferrer">Hablar sobre un proyecto</Button><Button to="/academy" variant="secondary">Explorar Academy</Button><Button to="/jack-aguilar" variant="ghost">Conoce a Jack Aguilar</Button></div>
     </div><div className="system-card" aria-label="Nuestro enfoque"><div className="system-line"><span>01</span><p><strong>Problema</strong> antes que herramienta</p></div><div className="system-line"><span>02</span><p><strong>Arquitectura</strong> suficiente y operable</p></div><div className="system-line"><span>03</span><p><strong>Evidencia</strong> antes que promesa</p></div><div className="system-line"><span>04</span><p><strong>Gobernanza</strong> proporcional al riesgo</p></div></div></div></Container></section>
     <section className="section"><Container><SectionHeading eyebrow="Capacidades Enterprise" title="Del proceso a un sistema que funciona." description="La tecnología se elige después de entender el contexto, los datos, las restricciones y el riesgo." /><div className="grid grid-4">{capabilities.map((item, i) => <Card key={item.title}><span className="card-index">0{i + 1}</span><h3>{item.title}</h3><p>{item.text}</p></Card>)}</div><Button to="/empresas" variant="secondary">Ver servicios para empresas</Button></Container></section>

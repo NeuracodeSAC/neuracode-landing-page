@@ -1,0 +1,80 @@
+version: '3.0'
+items:
+- id: linkedin-agentic-sdlc-mcp
+  type: external_social_post
+  status: published
+  platform: LinkedIn
+  title: Agentic Engineering, MCP y seguridad en el SDLC
+  url: https://es.linkedin.com/posts/jackaguilarc_engineeringleadership-sdlc2026-sdlcmoderno-activity-7430125241563099136-kawN
+  author: Jack Aguilar
+  topics:
+  - Agentic AI
+  - MCP
+  - Secure SDLC
+  site_summary: Reflexión pública sobre ingeniería agéntica, contexto, seguridad y
+    evolución del SDLC.
+  embed: optional
+- id: linkedin-software-product-ai
+  type: external_social_post
+  status: published
+  platform: LinkedIn
+  title: 'La IA cambia el rol del ingeniero: de código a producto, negocio y riesgo'
+  url: https://es.linkedin.com/posts/jackaguilarc_el-ingeniero-de-software-ahora-es-en-realidad-activity-7434364303513804801-R4JC
+  author: Jack Aguilar
+  topics:
+  - AI Adoption
+  - Software Engineering
+  - Business
+  site_summary: Reflexión sobre cómo la IA eleva la importancia del producto, el negocio,
+    el costo y el riesgo en ingeniería.
+  embed: optional
+- id: forensis-public-project
+  type: public_technical_project
+  status: published
+  title: FORENSIS — pipeline agéntico sobre datos públicos
+  url: https://auditoria.neuracode.dev/
+  author: Jack Aguilar / Neuracode
+  topics:
+  - Agentic AI
+  - Data Engineering
+  - HITL
+  - Reproducibility
+  site_summary: Proyecto técnico público con pipeline multiagente, validación, red-team
+    y revisión humana.
+  embed: 'no'
+- id: jack-intro-video
+  type: video
+  status: planned_needs_recording
+  title: Cómo trabajo un proyecto de IA
+  author: Jack Aguilar
+  topics:
+  - AI Automation
+  - Consulting
+  - Architecture
+  url: null
+  thumbnail: null
+  transcript_source: 07_RESOURCES_VIDEO_CONTENT.md
+  render_if_incomplete: false
+- id: agent-or-workflow-video
+  type: video
+  status: planned_or_match_existing
+  title: ¿Agente o workflow?
+  author: Jack Aguilar
+  topics:
+  - Agentic AI
+  - Architecture
+  url: null
+  thumbnail: null
+  render_if_incomplete: false
+- id: claude-first-question-video
+  type: video
+  status: planned_or_match_existing
+  title: Me piden Claude. ¿Por dónde empiezo?
+  author: Jack Aguilar
+  topics:
+  - Claude
+  - AI Automation
+  - Discovery
+  url: null
+  thumbnail: null
+  render_if_incomplete: false
