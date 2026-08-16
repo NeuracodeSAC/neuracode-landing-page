@@ -29,6 +29,9 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          artifact_dir="${RUNNER_TEMP}/neuracode-dist"
+          mkdir -p "$artifact_dir"
+          cp -R dist/. "$artifact_dir/"
           if git ls-remote --exit-code --heads origin hostinger-production; then
             git checkout -B hostinger-production origin/hostinger-production
             git rm -rf .
@@ -36,7 +39,8 @@ jobs:
             git checkout --orphan hostinger-production
             git rm -rf .
           fi
-          cp -R dist/. .
+          git clean -fdx
+          cp -R "$artifact_dir"/. .
           touch .nojekyll
           git add -A
           git commit -m "chore: publish Hostinger artifact from ${GITHUB_SHA}"
