@@ -5,7 +5,7 @@
 - Repository: `NeuracodeSAC/neuracode-landing-page`
 - Source branch: `main`
 - Static deployment branch: `hostinger-production`
-- Canonical domain: `https://neuracode.dev`
+- Canonical domain: `https://www.neuracode.dev`
 
 ## Hostinger deployment
 
@@ -22,5 +22,5 @@ All community calls to action open WhatsApp directly. No email-marketing key, da
 ## Production cutover
 
 1. Test the WhatsApp community link.
-2. Verify `https://neuracode.dev` and `https://www.neuracode.dev` after a change.
+2. Verify `https://neuracode.dev` redirects permanently to `https://www.neuracode.dev` after a change.
 3. Do not reintroduce Vercel for this site; it has been removed.

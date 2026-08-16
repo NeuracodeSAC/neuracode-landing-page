@@ -19,8 +19,8 @@ WhatsApp; esta versión no usa base de datos, Brevo ni un formulario propio.
 ## Producción
 
 - Hosting y DNS: Hostinger, cuenta `u431719834`.
-- Dominio principal: `https://neuracode.dev`.
-- También debe responder: `https://www.neuracode.dev`.
+- Dominio principal: `https://www.neuracode.dev`.
+- `https://neuracode.dev` redirige permanentemente hacia la versión `www`.
 - Directorio web de Hostinger: `public_html`.
 - SSL de Hostinger está activo.
 - Vercel fue retirado de esta landing; no reconectarlo ni apuntar DNS hacia Vercel.
