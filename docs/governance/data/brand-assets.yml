@@ -1,0 +1,60 @@
+version: "2.2"
+verified_date: "2026-08-16"
+canonical_palette:
+  primary_blue: "#2E76E5"
+  secondary_grey_blue: "#7C889A"
+  purple: "#A020F0"
+  light_purple: "#C5A3FF"
+  text_black: "#000000"
+  background_white: "#FFFFFF"
+
+assets:
+  - id: neuracode_wordmark_source
+    path: docs/brand/assets-source/neuracode-wordmark-source.png
+    source_filename: "NEURACODE VECTORIZAR.png"
+    type: logo_lockup_reference
+    width: 500
+    height: 500
+    format: PNG
+    color_mode: RGB
+    alpha: false
+    baked_background: white
+    production_ready: false
+    preferred_surfaces: [light]
+    notes:
+      - "large external whitespace"
+      - "do not treat as vector"
+      - "derive/crop only with visual QA"
+
+  - id: neuracode_isologo_source
+    path: docs/brand/assets-source/neuracode-isologo-source.png
+    source_filename: "isologo.png"
+    type: isologo_reference
+    width: 500
+    height: 500
+    format: PNG
+    color_mode: RGB
+    alpha: false
+    baked_background: white
+    production_ready: false
+    preferred_surfaces: [light]
+    intended_derivatives: [favicon, app_icon, compact_brand_mark]
+
+  - id: neuracode_palette_reference
+    path: docs/brand/assets-source/neuracode-palette-reference.png
+    source_filename: "4.png"
+    type: palette_reference
+    width: 500
+    height: 500
+    format: PNG
+    color_mode: RGB
+    production_ready: false
+
+prohibited_operations:
+  - recolor_logo
+  - css_invert_logo
+  - distort_logo
+  - morph_logo
+  - ai_regenerate_logo
+  - assume_transparency
+  - imply_vendor_partnership_from_logo

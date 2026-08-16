@@ -1,34 +1,19 @@
-# NeuraCode Web (NeuraCode + NeuraCode Academy)
+# Neuracode website
 
-Sitio web en React (Vite + TypeScript + Tailwind) con:
-- Página principal de NeuraCode (empresa)
-- Sección NeuraCode Academy (Reto 21 días)
-- Página de Sorteo Híbrido (Alexa + Mentoría)
-- Contacto a WhatsApp (link configurable)
+Sitio oficial de Neuracode, su línea Enterprise, Neuracode Academy y la página profesional de Jack Aguilar.
 
-## Requisitos
-- Node.js 18+
+## Desarrollo
 
-## Ejecutar
 ```bash
 npm install
 npm run dev
-```
-
-## Build
-```bash
+npm run check
 npm run build
 npm run preview
 ```
 
-## Configuración rápida
-Edita `src/config.ts` para:
-- WhatsApp
-- Enlaces de lista de espera / checkout
-- Fecha del sorteo
+El paquete de gobernanza instalado en `docs/governance/` es la fuente de verdad para arquitectura de marca, contenido, afirmaciones, redes, SEO y liberación. Consulta `AGENTS.md` antes de realizar cambios.
 
-## Contexto del proyecto
+## Despliegue
 
-La referencia operativa (repositorio oficial, despliegue, dominios y reglas de
-seguridad) está en [PROJECT_MEMORY.md](PROJECT_MEMORY.md). Léela antes de cambiar
-infraestructura, dominios o automatizaciones.
+El sitio se publica en Hostinger mediante GitHub Actions. Un push a `main` dispara producción; usa una rama de trabajo y revisión antes de integrar.

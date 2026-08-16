@@ -1,0 +1,79 @@
+version: 2.0
+last_verified: 2026-08-16
+links:
+  - brand: jack
+    platform: linkedin
+    url: https://www.linkedin.com/in/jackaguilarc/
+    status: canonical
+    surfaces: [jack, contacto]
+  - brand: jack
+    platform: instagram
+    url: https://www.instagram.com/jacktonyac/
+    status: canonical
+    surfaces: [jack, contacto]
+  - brand: jack
+    platform: tiktok
+    url: https://www.tiktok.com/@jacktonyac
+    status: canonical
+    surfaces: [jack, contacto]
+  - brand: jack
+    platform: facebook
+    url: https://www.facebook.com/jack.tony.1804/
+    status: canonical
+    surfaces: [jack, contacto]
+  - brand: jack
+    platform: carrd
+    url: https://jackaguilar.carrd.co/
+    status: retire_or_redirect
+    surfaces: []
+  - brand: neuracode
+    platform: website
+    url: https://www.neuracode.dev/
+    status: canonical
+    surfaces: [global, contacto]
+  - brand: neuracode
+    platform: linkedin
+    url: https://www.linkedin.com/company/neuracodelatam/
+    status: canonical
+    surfaces: [global, contacto]
+  - brand: neuracode
+    platform: facebook
+    url: https://www.facebook.com/neuracode/
+    status: canonical
+    surfaces: [global, contacto]
+  - brand: neuracode
+    platform: instagram
+    url: https://www.instagram.com/neuracode.dev/
+    status: canonical
+    surfaces: [global, contacto]
+  - brand: neuracode
+    platform: tiktok
+    url: https://www.tiktok.com/@jack.de.neura.code
+    status: rename_pending
+    target_identity: Neuracode
+    surfaces: [contacto]
+  - brand: academy
+    platform: instagram
+    url: https://www.instagram.com/neuracode0/
+    status: active_secondary
+    surfaces: [academy, contacto]
+  - brand: academy
+    platform: facebook
+    url: https://www.facebook.com/profile.php?id=61592205880028
+    status: active_secondary
+    surfaces: [academy, contacto]
+  - brand: legacy
+    platform: instagram
+    url: https://www.instagram.com/jackdeneuracode/
+    status: migration
+    surfaces: []
+  - brand: unknown
+    platform: facebook
+    url: https://www.facebook.com/profile.php?id=61586364313576
+    status: verify
+    surfaces: []
+  - brand: jack
+    platform: x
+    url: https://x.com/JackTonyAC
+    status: verify
+    surfaces: []

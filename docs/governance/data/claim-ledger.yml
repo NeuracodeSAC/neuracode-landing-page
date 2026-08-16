@@ -1,0 +1,41 @@
+version: 2.0
+claims:
+  - id: jack_positioning
+    class: PROFESSIONAL_EXPERIENCE
+    public_wording: "Software Engineer & AI Systems / Automation Consultant"
+    status: approved_direction
+  - id: provider_neutral
+    class: PROFESSIONAL_EXPERIENCE
+    public_wording: "Trabaja con distintos modelos, proveedores y patrones según el problema."
+    status: approved_direction
+  - id: caja_93_percent
+    class: PROFESSIONAL_EXPERIENCE
+    proposed_wording: "93% de reducción de tiempo operativo"
+    status: hold_for_evidence_context_permission
+  - id: sdc_seal
+    class: PROFESSIONAL_EXPERIENCE
+    engagement_mode: consulting-engagement
+    status: hold_exact_public_wording_permission
+  - id: sdc_megalineas
+    class: PROFESSIONAL_EXPERIENCE
+    engagement_mode: consulting-engagement
+    status: hold_exact_public_wording_permission
+  - id: medina_cuba_plumbing
+    class: CURRENT_ENGAGEMENT
+    status: no_success_claim_yet
+  - id: hola_mujer
+    class: CURRENT_ENGAGEMENT
+    status: no_success_claim_yet_health_review
+  - id: additional_physician
+    class: PIPELINE
+    status: do_not_publish_as_client
+  - id: manager_powerbi_ai
+    class: PIPELINE
+    status: do_not_publish_as_client
+  - id: uni_masters
+    class: PROFESSIONAL_EXPERIENCE
+    public_wording: "Estudios de Maestría en Inteligencia Artificial — UNI (programa actualmente pausado)"
+    status: user_confirmed_wording_direction
+  - id: neuracode_founding_date
+    class: HYPOTHESIS
+    status: human_tbd_do_not_publish_date

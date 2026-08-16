@@ -1,19 +1,2 @@
-﻿import React from 'react'
-import Container from '../components/Container'
-import Button from '../components/Button'
-
-export default function NotFound() {
-  return (
-    <div className="py-20">
-      <Container>
-        <div className="max-w-xl">
-          <h1 className="text-3xl font-extrabold">Página no encontrada</h1>
-          <p className="mt-3 text-secondary-700">La ruta que buscas no existe.</p>
-          <div className="mt-6">
-            <Button href="/">Volver al inicio</Button>
-          </div>
-        </div>
-      </Container>
-    </div>
-  )
-}
+import Button from '../components/Button'; import Container from '../components/Container'; import PageMeta from '../components/PageMeta'
+export default function NotFound(){return <><PageMeta path="/404" title="Página no encontrada — Neuracode" description="La página solicitada no existe."/><section className="page-hero"><Container><p className="eyebrow">Error 404</p><h1>Esta ruta no existe.</h1><p>Puedes volver al inicio o explorar nuestros servicios para empresas.</p><div className="actions"><Button to="/">Volver al inicio</Button><Button to="/empresas" variant="secondary">Ver Empresas</Button></div></Container></section></>}
