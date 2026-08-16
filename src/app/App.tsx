@@ -4,7 +4,6 @@ import SiteLayout from './SiteLayout'
 import Home from '../pages/Home'
 import Academy from '../pages/Academy'
 import Comunidad from '../pages/Comunidad'
-import ComunidadGracias from '../pages/ComunidadGracias'
 import Live from '../pages/Live'
 import Jack from '../pages/Jack'
 import NotFound from '../pages/NotFound'
@@ -18,7 +17,7 @@ export default function App() {
         <Route path="/reto-21-dias" element={<Navigate to="/comunidad" replace />} />
         <Route path="/sorteo" element={<Navigate to="/comunidad" replace />} />
         <Route path="/comunidad" element={<Comunidad />} />
-        <Route path="/comunidad/gracias" element={<ComunidadGracias />} />
+        <Route path="/comunidad/gracias" element={<Navigate to="/comunidad" replace />} />
         <Route path="/live" element={<Live />} />
         <Route path="/jack" element={<Jack />} />
         <Route path="/equipo" element={<Navigate to="/jack" replace />} />

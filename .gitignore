@@ -4,6 +4,5 @@ dist/
 *.tsbuildinfo
 .env
 .env.*.local
-public/api/config.php
 *.log
 .DS_Store
