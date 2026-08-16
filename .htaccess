@@ -1,0 +1,14 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Keep one public URL for visitors and search engines.
+  RewriteCond %{HTTP_HOST} ^neuracode\.dev(?::[0-9]+)?$ [NC]
+  RewriteRule ^ https://www.neuracode.dev%{REQUEST_URI} [R=301,L]
+
+  RewriteRule ^(jack|equipo|about|founder|ceo)/?$ /jack-aguilar [R=301,L]
+  RewriteRule ^(reto-21-dias|sorteo|comunidad|comunidad/gracias|live)/?$ /academy [R=301,L]
+
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^ index.html [L]
+</IfModule>
