@@ -26,3 +26,9 @@ Edita `src/config.ts` para:
 - WhatsApp
 - Enlaces de lista de espera / checkout
 - Fecha del sorteo
+
+## Contexto del proyecto
+
+La referencia operativa (repositorio oficial, despliegue, dominios y reglas de
+seguridad) está en [PROJECT_MEMORY.md](PROJECT_MEMORY.md). Léela antes de cambiar
+infraestructura, dominios o automatizaciones.
