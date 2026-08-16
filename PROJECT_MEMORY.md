@@ -12,7 +12,7 @@ WhatsApp; esta versión no usa base de datos, Brevo ni un formulario propio.
 
 - Repositorio oficial: `NeuracodeSAC/neuracode-landing-page`.
 - Directorio local: `/Users/jackaguilar/Projects/02-neuracode/active/neuracode-landing-page`.
-- Rama de desarrollo: `main`.
+- Rama de producción: `main`; el trabajo debe realizarse en ramas de revisión.
 - Rama de artefactos compilados: `hostinger-production`.
 - El repositorio anterior de `JackGod7` ya no debe usarse para este proyecto.
 
@@ -62,7 +62,7 @@ y raíz `public_html`.
 - Nunca guardar tokens, claves API, contraseñas ni archivos `.env` en Git.
 - No usar variables `VITE_*` para secretos: Vite las expone al navegador.
 - Mantener la integración de Hostinger limitada a esta organización y repositorio.
-- El repositorio es privado. Dependabot security updates está activo.
+- GitHub mostraba el repositorio como público el 2026-08-16. La visibilidad deseada sigue pendiente de decisión humana.
 - Secret scanning y push protection no están disponibles para este repositorio
   privado con el plan actual; compensar con revisión antes de `git push` y no
   almacenar secretos en el proyecto.

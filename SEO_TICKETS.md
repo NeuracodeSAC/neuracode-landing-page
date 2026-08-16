@@ -1,4 +1,6 @@
-# SEO & Brand Authority — Tickets
+# ARCHIVO HISTÓRICO — SEO & Brand Authority
+
+> Este documento no es autoridad vigente. Conserva contexto de incidentes y tareas anteriores. La política actual está en `AGENTS.md` y `docs/governance/`; no reutilices identidades, cargos ni fechas de este archivo sin volver a verificarlos.
 
 Owner: Jack Aguilar
 Origen: AI Overview de Google atribuyó falsamente a Manuel Sigüeñas como "fundador de NeuraCode" (2026-04-19).

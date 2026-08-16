@@ -1,106 +1,26 @@
-﻿import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { useEffect, useState } from 'react'
+import { NavLink, useLocation } from 'react-router-dom'
 import Container from './Container'
 import Button from './Button'
-import { config } from '../config'
+import { config, whatsappUrl } from '../config'
 
-function NavItem({ to, children, onClick }: { to: string, children: React.ReactNode, onClick?: () => void }) {
-  return (
-    <NavLink
-      to={to}
-      onClick={onClick}
-      className={({ isActive }) =>
-        'text-sm font-medium transition ' + (isActive ? 'text-neurablue-700' : 'text-secondary-700 hover:text-ink')
-      }
-    >
-      {children}
-    </NavLink>
-  )
-}
-
+const links = [['/empresas', 'Empresas'], ['/academy', 'Academy'], ['/casos', 'Casos'], ['/jack-aguilar', 'Jack Aguilar'], ['/recursos', 'Recursos'], ['/contacto', 'Contacto']]
 export default function Navbar() {
-  const [logoMissing, setLogoMissing] = React.useState(false)
-  const [menuOpen, setMenuOpen] = React.useState(false)
-
-  return (
-    <header className="sticky top-0 z-40 border-b border-secondary-200 bg-paper/90 backdrop-blur">
-      <Container>
-        <div className="flex items-center justify-between gap-3 py-4 flex-wrap">
-          <NavLink to="/" className="flex items-center gap-3">
-            {!logoMissing ? (
-              <img
-                src={config.brand.logoSrc}
-                alt={`${config.brand.company} logo`}
-                className="h-12 w-auto"
-                onError={() => setLogoMissing(true)}
-              />
-            ) : (
-              <div className="h-9 w-9 rounded-xl bg-lilac-500/25 border border-purple-500/30 grid place-items-center">
-                <span className="font-black text-purple-600">N</span>
-              </div>
-            )}
-            <div className="leading-tight">
-              <div className="font-extrabold tracking-tight">{config.brand.company}</div>
-              <div className="text-xs text-secondary-600">{config.brand.tagline}</div>
-            </div>
-          </NavLink>
-
-          <nav className="hidden md:flex items-center gap-6">
-            <NavItem to="/">Inicio</NavItem>
-            <NavItem to="/live">
-              <span className="flex items-center gap-1.5">
-                <span className="h-1.5 w-1.5 rounded-full bg-red-500 animate-pulse" aria-hidden="true" />
-                Live
-              </span>
-            </NavItem>
-            <NavItem to="/comunidad">Comunidad</NavItem>
-          </nav>
-
-          <div className="flex items-center gap-2">
-            {config.zoomLink && !config.zoomLink.includes('TODO') && (
-              <a
-                href={config.zoomLink}
-                target="_blank"
-                rel="noreferrer"
-                className="hidden sm:inline-flex items-center gap-1.5 rounded-xl bg-red-500 hover:bg-red-600 text-white px-3 py-2 text-xs font-bold transition"
-              >
-                <span className="h-1.5 w-1.5 rounded-full bg-white animate-pulse" />
-                EN VIVO HOY 8PM
-              </a>
-            )}
-            <Button className="px-3 sm:px-4 text-xs sm:text-sm" href={config.links.whatsappComunidad} target="_blank" rel="noreferrer">WhatsApp</Button>
-            <button
-              type="button"
-              className="md:hidden inline-flex items-center justify-center h-10 w-10 rounded-xl border border-secondary-200 text-secondary-700 hover:bg-secondary-50"
-              aria-label="Abrir menú"
-              aria-expanded={menuOpen}
-              onClick={() => setMenuOpen((prev) => !prev)}
-            >
-              <span className="text-lg leading-none">{menuOpen ? '×' : '☰'}</span>
-            </button>
-          </div>
-        </div>
-
-        <div className={menuOpen ? 'md:hidden pb-4' : 'md:hidden hidden'}>
-          <nav className="flex flex-col gap-3 border-t border-secondary-200 pt-4">
-            <NavItem to="/" onClick={() => setMenuOpen(false)}>Inicio</NavItem>
-            <NavItem to="/live" onClick={() => setMenuOpen(false)}>Live</NavItem>
-            <NavItem to="/comunidad" onClick={() => setMenuOpen(false)}>Comunidad</NavItem>
-            {config.zoomLink && !config.zoomLink.includes('TODO') && (
-              <a
-                href={config.zoomLink}
-                target="_blank"
-                rel="noreferrer"
-                onClick={() => setMenuOpen(false)}
-                className="inline-flex items-center gap-1.5 rounded-xl bg-red-500 text-white px-3 py-2 text-xs font-bold"
-              >
-                <span className="h-1.5 w-1.5 rounded-full bg-white animate-pulse" />
-                EN VIVO HOY 8PM — Entrar al Zoom
-              </a>
-            )}
-          </nav>
-        </div>
-      </Container>
-    </header>
-  )
+  const [open, setOpen] = useState(false)
+  const location = useLocation()
+  useEffect(() => setOpen(false), [location.pathname])
+  return <header className="site-header">
+    <Container className="nav-wrap">
+      <NavLink to="/" className="brand" aria-label="Neuracode, inicio">
+        <img src={config.brand.logoSrc} alt="Neuracode" width="400" height="140" />
+      </NavLink>
+      <button className="menu-button" type="button" aria-expanded={open} aria-controls="primary-nav" onClick={() => setOpen(!open)}>
+        <span className="sr-only">{open ? 'Cerrar menú' : 'Abrir menú'}</span><span aria-hidden="true">{open ? '×' : '☰'}</span>
+      </button>
+      <nav id="primary-nav" className={open ? 'nav-links is-open' : 'nav-links'} aria-label="Navegación principal">
+        {links.map(([to, label]) => <NavLink key={to} to={to}>{label}</NavLink>)}
+        <Button href={whatsappUrl('proyecto')} target="_blank" rel="noreferrer">Hablar sobre un proyecto</Button>
+      </nav>
+    </Container>
+  </header>
 }

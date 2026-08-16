@@ -1,32 +1,18 @@
-﻿import React from 'react'
-import { Routes, Route, Navigate } from 'react-router-dom'
+import { Navigate, Route, Routes } from 'react-router-dom'
 import SiteLayout from './SiteLayout'
 import Home from '../pages/Home'
+import Empresas from '../pages/Empresas'
 import Academy from '../pages/Academy'
-import Comunidad from '../pages/Comunidad'
-import Live from '../pages/Live'
+import Casos from '../pages/Casos'
 import Jack from '../pages/Jack'
+import Recursos from '../pages/Recursos'
+import Contacto from '../pages/Contacto'
 import NotFound from '../pages/NotFound'
-
 export default function App() {
-  return (
-    <Routes>
-      <Route element={<SiteLayout />}>
-        <Route path="/" element={<Home />} />
-        <Route path="/academy" element={<Academy />} />
-        <Route path="/reto-21-dias" element={<Navigate to="/comunidad" replace />} />
-        <Route path="/sorteo" element={<Navigate to="/comunidad" replace />} />
-        <Route path="/comunidad" element={<Comunidad />} />
-        <Route path="/comunidad/gracias" element={<Navigate to="/comunidad" replace />} />
-        <Route path="/live" element={<Live />} />
-        <Route path="/jack" element={<Jack />} />
-        <Route path="/equipo" element={<Navigate to="/jack" replace />} />
-        <Route path="/about" element={<Navigate to="/jack" replace />} />
-        <Route path="/founder" element={<Navigate to="/jack" replace />} />
-        <Route path="/ceo" element={<Navigate to="/jack" replace />} />
-        <Route path="/404" element={<NotFound />} />
-        <Route path="*" element={<Navigate to="/404" replace />} />
-      </Route>
-    </Routes>
-  )
+  return <Routes><Route element={<SiteLayout />}>
+    <Route path="/" element={<Home />} /><Route path="/empresas" element={<Empresas />} /><Route path="/academy" element={<Academy />} /><Route path="/casos" element={<Casos />} /><Route path="/jack-aguilar" element={<Jack />} /><Route path="/jack" element={<Navigate to="/jack-aguilar" replace />} /><Route path="/recursos" element={<Recursos />} /><Route path="/contacto" element={<Contacto />} />
+    {['/reto-21-dias','/sorteo','/comunidad','/comunidad/gracias','/live'].map(path => <Route key={path} path={path} element={<Navigate to="/academy" replace />} />)}
+    {['/equipo','/about','/founder','/ceo'].map(path => <Route key={path} path={path} element={<Navigate to="/jack-aguilar" replace />} />)}
+    <Route path="/404" element={<NotFound />} /><Route path="*" element={<NotFound />} />
+  </Route></Routes>
 }

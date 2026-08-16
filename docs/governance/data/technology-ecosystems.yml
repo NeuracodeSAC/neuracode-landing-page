@@ -1,0 +1,68 @@
+version: "2.2"
+verified_date: "2026-08-16"
+positioning: provider_neutral
+
+technology_groups:
+  model_provider_ecosystems:
+    - name: "Anthropic / Claude"
+      status: user_confirmed_experience
+      public: true
+    - name: "OpenAI"
+      status: user_confirmed_experience
+      public: true
+
+  developer_agent_products:
+    - name: "Codex"
+      vendor: "OpenAI"
+      status: user_confirmed_experience
+      public: true
+
+  enterprise_model_platforms:
+    - name: "AWS Bedrock"
+      status: user_confirmed_experience
+      public: true
+      classification_note: "platform/service, not itself an LLM"
+
+  orchestration_frameworks:
+    - name: "LangChain"
+      status: user_confirmed_experience
+      public: true
+    - name: "LangGraph"
+      status: user_confirmed_experience
+      public: true
+
+  protocols_patterns:
+    - name: "MCP"
+      status: user_confirmed_experience
+      public: true
+    - name: "Skills"
+      status: user_confirmed_experience
+      public: true
+    - name: "Tool use / function calling"
+      status: user_confirmed_experience
+      public: true
+    - name: "RAG"
+      status: experience_context
+      public: true
+      qualifier: "when justified"
+    - name: "Human-in-the-loop"
+      status: positioning_pattern
+      public: true
+    - name: "Evaluations / observability"
+      status: positioning_pattern
+      public: true
+
+display_policy:
+  hero_vendor_list: false
+  homepage_compact_ecosystem_section: true
+  empresas_buyer_technology_block: true
+  jack_technology_judgment_section: true
+  vendor_logo_default: false
+  preferred_visual: text_chips
+
+prohibited_claims:
+  - "partner status without evidence"
+  - "expert in every LLM"
+  - "all problems require an LLM"
+  - "Bedrock is an LLM"
+  - "LangGraph/LangChain are LLMs"

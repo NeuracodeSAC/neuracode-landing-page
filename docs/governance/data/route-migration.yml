@@ -1,0 +1,25 @@
+version: 2.0
+current_observed:
+  /: REVIEW
+  /academy: KEEP_REDESIGN
+  /comunidad: REVIEW
+  /live: REVIEW
+  /jack: REDIRECT_301_TO_JACK_AGUILAR
+  /reto-21-dias: LEGACY_REDIRECT_REVIEW
+  /sorteo: LEGACY_REDIRECT_REVIEW
+  /comunidad/gracias: LEGACY_REDIRECT_REVIEW
+  /equipo: REDIRECT_TO_JACK_REVIEW_SERVER_SEMANTICS
+  /about: REDIRECT_TO_JACK_REVIEW_SERVER_SEMANTICS
+  /founder: REDIRECT_TO_JACK_REVIEW_SERVER_SEMANTICS
+  /ceo: REDIRECT_TO_JACK_REVIEW_SERVER_SEMANTICS
+  /auditoria: SITEMAP_ONLY_MISMATCH_REVIEW
+
+target_candidates:
+  /empresas: CREATE
+  /casos: CREATE
+  /jack-aguilar: CREATE_CANONICAL_PERSON_PAGE
+  /academy: KEEP_REDESIGN
+  /recursos: CREATE
+  /contacto: CREATE
+
+# Final HTTP status/redirect destinations require Gate 1 approval and server-level verification.
