@@ -1,0 +1,7 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Keep one public URL for visitors and search engines.
+  RewriteCond %{HTTP_HOST} ^neuracode\.dev(?::[0-9]+)?$ [NC]
+  RewriteRule ^ https://www.neuracode.dev%{REQUEST_URI} [R=301,L]
+</IfModule>
