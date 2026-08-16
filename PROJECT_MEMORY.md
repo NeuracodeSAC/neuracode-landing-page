@@ -53,14 +53,19 @@ curl -I https://neuracode.dev
 ```
 
 En GitHub, revisar que el workflow **Publish Hostinger artifact** haya terminado
-en verde. En Hostinger, el despliegue debe indicar `Completed`, rama
-`hostinger-production` y raíz `public_html`.
+en verde y que **Verify production** confirme `www = 200` y raíz = `301`. En
+Hostinger, el despliegue debe indicar `Completed`, rama `hostinger-production`
+y raíz `public_html`.
 
 ## Reglas de seguridad
 
 - Nunca guardar tokens, claves API, contraseñas ni archivos `.env` en Git.
 - No usar variables `VITE_*` para secretos: Vite las expone al navegador.
 - Mantener la integración de Hostinger limitada a esta organización y repositorio.
+- El repositorio es privado. Dependabot security updates está activo.
+- Secret scanning y push protection no están disponibles para este repositorio
+  privado con el plan actual; compensar con revisión antes de `git push` y no
+  almacenar secretos en el proyecto.
 - Antes de tocar DNS, conservar los registros de correo (MX, SPF y DKIM).
 - Si se vuelve a usar Brevo u otro proveedor, crear las credenciales nuevas en
   su panel y almacenarlas solo en el servidor o proveedor de secretos.
