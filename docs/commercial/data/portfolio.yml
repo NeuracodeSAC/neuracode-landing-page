@@ -1,0 +1,125 @@
+version: '3.0'
+updated: '2026-08-16'
+items:
+- id: caja-metropolitana
+  title: Software y seguridad en banca regulada
+  organization: Caja Metropolitana de Lima
+  evidence_class: PROFESSIONAL_EXPERIENCE
+  engagement_mode: employer
+  public_status: publish_safe_summary
+  categories:
+  - Enterprise Software
+  - Security
+  - Banking
+  summary: Backend, APIs, seguridad, HSM, transferencias inmediatas y autenticación
+    biométrica en un contexto bancario regulado.
+  metric_93_percent:
+    status: HOLD
+    value: 93% de reducción de tiempo operativo
+  show_on:
+  - jack
+  - casos
+- id: sdc-consulting-data-ai
+  title: Data, analítica e IA aplicada en consultoría
+  organization: SDC Consulting
+  evidence_class: PROFESSIONAL_EXPERIENCE
+  engagement_mode: consultant
+  public_status: publish_safe_summary
+  categories:
+  - Data & Predictive AI
+  - Consulting
+  - Architecture
+  summary: Data Warehouse/Data Lake, BI, ML, NLP, gobierno de datos, automatización
+    y habilitadores técnicos de IA en proyectos de sector público, utilities y telecomunicaciones.
+  show_on:
+  - jack
+  - casos
+- id: sdc-seal
+  title: Agentes y automatización en utilities
+  organization: SEAL
+  evidence_class: PROFESSIONAL_EXPERIENCE
+  engagement_mode: consulting_through_sdc
+  public_status: anonymize_until_human_confirmation
+  safe_public_label: Organización del sector utilities
+  summary: Experiencia en soluciones de agentes/automatización y habilitadores de
+    IA dentro de un engagement de consultoría.
+  show_on:
+  - casos
+- id: sdc-megalineas
+  title: Forecasting y analítica predictiva
+  organization: Megalíneas
+  evidence_class: PROFESSIONAL_EXPERIENCE
+  engagement_mode: consulting_through_sdc
+  public_status: anonymize_until_human_confirmation
+  safe_public_label: Organización de telecomunicaciones
+  summary: Forecasting y analítica predictiva para apoyar decisiones basadas en datos
+    dentro de un engagement de consultoría.
+  show_on:
+  - casos
+- id: atlantic-city
+  title: Enterprise software, AI Coding y evolución del SDLC
+  organization: Atlantic City Casino & Sports
+  evidence_class: PROFESSIONAL_EXPERIENCE
+  engagement_mode: employer_current
+  public_status: publish_safe_summary
+  summary: Software engineering en entorno regulado; AI Coding/SDLC, hardening, arquitectura
+    y cloud/data. No publicar detalles internos sensibles.
+  show_on:
+  - jack
+  - casos
+- id: sdc-learning-instructor
+  title: Instructor de Agentes de Inteligencia Artificial
+  organization: SDC Learning
+  evidence_class: PROFESSIONAL_EXPERIENCE
+  engagement_mode: instructor
+  public_status: publish
+  summary: Formación a profesionales en arquitecturas basadas en LLMs, sistemas agénticos
+    y adopción de IA aplicada.
+  show_on:
+  - jack
+  - academy
+- id: forensis
+  title: FORENSIS — pipeline agéntico sobre datos públicos
+  organization: Neuracode
+  evidence_class: PUBLIC_LAB_RESEARCH
+  engagement_mode: public_technical_project
+  public_status: publish_technical_only
+  url: https://auditoria.neuracode.dev/
+  summary: Pipeline de siete agentes con extracción, validación estadística, red-team,
+    narrativa y aprobación humana antes de publicación.
+  show_on:
+  - casos
+  - jack_optional
+- id: medina-cuba-plumbing
+  title: Automatización de operaciones en servicios
+  organization: Medina Cuba Plumbing
+  evidence_class: CURRENT_ENGAGEMENT
+  engagement_mode: direct_current
+  public_status: anonymize_until_name_permission
+  safe_public_label: Empresa de servicios
+  summary: Engagement actual de automatización e IA aplicada a procesos operativos.
+    Sin claim de resultado todavía.
+  show_on:
+  - casos_optional
+- id: hola-mujer
+  title: Automatización de procesos en salud
+  organization: Hola Mujer
+  evidence_class: CURRENT_ENGAGEMENT
+  engagement_mode: direct_current
+  public_status: anonymize_until_name_permission_and_health_review
+  safe_public_label: Servicio de salud
+  summary: Engagement actual de automatización/IA con privacidad, límites de automatización
+    y revisión humana.
+  show_on:
+  - casos_optional
+- id: additional-physician
+  title: Oportunidad médica adicional
+  evidence_class: PIPELINE
+  public_status: do_not_publish
+  show_on: []
+- id: cio-powerbi-ai
+  title: Power BI + AI executive analysis lead
+  evidence_class: PIPELINE
+  public_status: do_not_publish_as_client
+  educational_reuse: May inspire anonymized resource content.
+  show_on: []

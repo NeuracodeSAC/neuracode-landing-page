@@ -65,3 +65,12 @@ For the FIRST audit/redesign task, read the full pack once.
 ## First action
 Before redesign implementation, execute Gate 0 and Gate 1 from `10_IMPLEMENTATION_GATES_AND_QA.md` using `12_CODEX_GATE_0_1_TASK.md`.
 Stop for approval after Gate 1.
+
+## Commercial content
+For Jack portfolio, public experience, resources, Academy commercial content and route-level SEO, read `docs/commercial/`.
+
+- Distinguish case study vs professional experience vs current work vs pipeline.
+- Do not render an empty portfolio when publishable professional experience exists.
+- Primary Jack positioning is buyer-readable; technical judgment is demonstrated through evidence, not sold as an abstract slogan.
+- Curated video/social content is allowed, but specific external URLs must be verified and third-party embeds must not dominate performance.
+- Canonical public routes should contain meaningful static HTML before JavaScript.

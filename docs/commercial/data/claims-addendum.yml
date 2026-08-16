@@ -1,0 +1,26 @@
+version: '3.0'
+rules:
+- id: jack_role_v3
+  status: approved_direction
+  public_wording: Software Engineer & AI Automation Consultant
+- id: jack_search_descriptor
+  status: approved_direction
+  public_wording: Consultor de IA, Automatización y Agentes para Empresas
+- id: sdc_learning_instructor
+  status: supported_by_cv
+  public_wording: Instructor de Agentes de Inteligencia Artificial en SDC Learning
+- id: masters_paused
+  status: human_governed
+  public_wording: Estudios de Maestría en Inteligencia Artificial — UNI (programa
+    actualmente pausado)
+- id: caja_93
+  status: HOLD
+  public_wording: null
+- id: medina_result
+  status: NO_SUCCESS_CLAIM_YET
+- id: hola_mujer_result
+  status: NO_SUCCESS_CLAIM_YET_HEALTH
+- id: seAL_direct_client
+  status: PROHIBITED_UNLESS_CONTRACTUAL_FACT_CHANGES
+- id: megalineas_direct_client
+  status: PROHIBITED_UNLESS_CONTRACTUAL_FACT_CHANGES

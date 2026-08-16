@@ -1,0 +1,27 @@
+{
+  "pack": "Neuracode Commercial Portfolio & SEO Pack",
+  "version": "3.0",
+  "date": "2026-08-16",
+  "target_repo": "NeuracodeSAC/neuracode-landing-page",
+  "install_path_suggestion": "docs/commercial",
+  "documents": [
+    "README_FOR_CODEX.md",
+    "00_CODEX_IMPLEMENTATION_TASK.md",
+    "01_COMMERCIAL_POSITIONING.md",
+    "02_JACK_AGUILAR_PAGE_SPEC.md",
+    "03_PORTFOLIO_EVIDENCE_INVENTORY.md",
+    "04_CASE_AND_EXPERIENCE_COPY.md",
+    "05_ENTERPRISE_SALES_COPY.md",
+    "06_ACADEMY_CONTENT.md",
+    "07_RESOURCES_VIDEO_CONTENT.md",
+    "08_SEO_ROUTE_MAP.md",
+    "09_STATIC_RENDERING_AND_STRUCTURED_DATA.md",
+    "10_CONVERSION_AND_ANALYTICS.md",
+    "11_CONTENT_AND_VISUAL_RULES.md",
+    "12_ACCEPTANCE_CRITERIA_AND_EVALS.md",
+    "13_SOURCE_REGISTER.md",
+    "14_AGENTS_MD_ADDENDUM.md",
+    "15_TECHNICAL_CAPABILITY_MAP.md",
+    "16_PROOF_GAPS_AND_HUMAN_INPUTS.md"
+  ]
+}

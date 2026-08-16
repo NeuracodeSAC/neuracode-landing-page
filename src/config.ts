@@ -2,9 +2,9 @@ const whatsappNumber = '51982859073'
 
 export type ContactIntent = 'proyecto' | 'formacion' | 'academy' | 'alianza'
 const messages: Record<ContactIntent, string> = {
-  proyecto: 'Hola Neuracode, quiero conversar sobre un proyecto de IA, automatización o software.',
+  proyecto: 'Hola Neuracode, quiero revisar un proceso o proyecto para evaluar una solución de IA o automatización.',
   formacion: 'Hola Neuracode, quiero información sobre formación corporativa para mi equipo.',
-  academy: 'Hola Neuracode, quiero conocer los próximos programas de Academy.',
+  academy: 'Hola Neuracode, quiero recibir información de próximos workshops y webinars de Academy.',
   alianza: 'Hola Neuracode, quiero conversar sobre una alianza.',
 }
 export const whatsappUrl = (intent: ContactIntent = 'proyecto') => `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(messages[intent])}`

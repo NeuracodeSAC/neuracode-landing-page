@@ -1,0 +1,28 @@
+version: '3.0'
+authority:
+- id: sdc-learning-ai-agents
+  organization: SDC Learning
+  role: Instructor de Agentes de Inteligencia Artificial
+  status: publish
+  topics:
+  - LLM architectures
+  - Agentic systems
+  - Applied AI adoption
+public_offers:
+- id: corporate-ai-training
+  title: Formación corporativa en IA
+  status: active_evergreen
+  description: Talleres y programas adaptados a los procesos, roles, herramientas
+    y riesgos reales del equipo.
+internal_offer_ideas:
+- id: llms-ai-agents-leaders
+  title: LLMs & AI Agents for Leaders
+  status: validate_before_public_launch
+  description: Cómo identificar oportunidades, evaluar arquitectura, riesgo, costo
+    y diseñar un piloto controlado.
+- id: ai-coding-secure-sdlc
+  title: AI Coding & Secure / Agentic SDLC
+  status: validate_before_public_launch
+- id: agentic-workflows
+  title: AI Agents & Agentic Workflows
+  status: validate_before_public_launch
