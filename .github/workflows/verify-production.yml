@@ -20,10 +20,12 @@ jobs:
           set -euo pipefail
 
           for attempt in {1..12}; do
-            apex_headers="$(curl --silent --show-error --max-time 20 --dump-header - --output /dev/null -A 'Mozilla/5.0' https://neuracode.dev)"
+            # Hostinger serves this website over IPv4; forcing it avoids an
+            # intermittent IPv6 connection timeout on hosted CI runners.
+            apex_headers="$(curl --ipv4 --silent --show-error --connect-timeout 8 --max-time 20 --dump-header - --output /dev/null -A 'Mozilla/5.0' https://neuracode.dev || true)"
             apex_status="$(printf '%s\n' "$apex_headers" | awk '/^HTTP\// {status=$2} END {print status}')"
             apex_location="$(printf '%s\n' "$apex_headers" | awk 'BEGIN {IGNORECASE=1} /^location:/ {print $2}' | tr -d '\r')"
-            www_status="$(curl --silent --show-error --max-time 20 --output /dev/null --write-out '%{http_code}' -A 'Mozilla/5.0' https://www.neuracode.dev)"
+            www_status="$(curl --ipv4 --silent --show-error --connect-timeout 8 --max-time 20 --output /dev/null --write-out '%{http_code}' -A 'Mozilla/5.0' https://www.neuracode.dev || true)"
 
             if [[ "$apex_status" == "301" && "$apex_location" == "https://www.neuracode.dev/" && "$www_status" == "200" ]]; then
               echo "Production checks passed on attempt $attempt."
