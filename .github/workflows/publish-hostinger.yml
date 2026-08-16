@@ -1,0 +1,43 @@
+name: Publish Hostinger artifact
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: hostinger-production
+  cancel-in-progress: true
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - name: Update deployment branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git ls-remote --exit-code --heads origin hostinger-production; then
+            git checkout -B hostinger-production origin/hostinger-production
+            git rm -rf .
+          else
+            git checkout --orphan hostinger-production
+            git rm -rf .
+          fi
+          cp -R dist/. .
+          touch .nojekyll
+          git add -A
+          git commit -m "chore: publish Hostinger artifact from ${GITHUB_SHA}"
+          git push origin HEAD:hostinger-production

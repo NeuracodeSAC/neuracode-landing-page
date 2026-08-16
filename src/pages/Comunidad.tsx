@@ -123,11 +123,6 @@ export default function Comunidad() {
     return null
   }
 
-  const isConfigured = (value: string | undefined): boolean => {
-    if (!value) return false
-    return !value.includes('TODO')
-  }
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setErrorTelefono('')
@@ -141,70 +136,22 @@ export default function Comunidad() {
     setLoading(true)
 
     try {
-      let success = false
+      const res = await fetch('/api/community-signup', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+        body: JSON.stringify({
+          nombre: form.nombre.trim(),
+          email: form.email.trim(),
+          profesion: form.profesion.trim(),
+          pais: form.pais,
+          telefono: form.codigoPais + form.telefono.replace(/\D/g, '').trim(),
+        }),
+      })
 
-      // 1. Intentar Brevo
-      if (isConfigured(config.brevo.apiKey)) {
-        try {
-          const res = await fetch('https://api.brevo.com/v3/contacts', {
-            method: 'POST',
-            headers: {
-              'api-key': config.brevo.apiKey,
-              'Content-Type': 'application/json',
-              'Accept': 'application/json',
-            },
-            body: JSON.stringify({
-              email: form.email.trim(),
-              attributes: {
-                NOMBRE: form.nombre.trim(),
-                PROFESION: form.profesion.trim(),
-                PAIS: form.pais,
-                SMS: form.codigoPais + form.telefono.replace(/\D/g, '').trim(),
-              },
-              listIds: [Number(config.brevo.listId)],
-              updateEnabled: true,
-            }),
-          })
-
-          if (res.status === 200 || res.status === 201 || res.status === 204) {
-            success = true
-          }
-        } catch {
-          // Brevo fallo, intentar Formspree
-        }
-      }
-
-      // 2. Fallback Formspree
-      if (!success) {
-        if (isConfigured(config.formspree.id)) {
-          try {
-            const res = await fetch(`https://formspree.io/f/${config.formspree.id}`, {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json',
-              },
-              body: JSON.stringify({
-                name: form.nombre.trim(),
-                email: form.email.trim(),
-                profesion: form.profesion.trim(),
-                pais: form.pais,
-                telefono: form.codigoPais + form.telefono.replace(/\D/g, '').trim(),
-              }),
-            })
-
-            if (res.ok) {
-              success = true
-            }
-          } catch {
-            // Formspree tambien fallo
-          }
-        } else {
-          console.warn('Ni Brevo ni Formspree estan configurados.')
-        }
-      }
-
-      if (success) {
+      if (res.ok) {
         trackFBEvent('Lead')
         trackFBEvent('CompleteRegistration')
         trackGAEvent('generate_lead', { method: 'community_form' })

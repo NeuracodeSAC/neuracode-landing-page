@@ -2,10 +2,6 @@
 const wa = (message: string) => `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`
 
 export const config = {
-  brevo: {
-    apiKey: import.meta.env.VITE_BREVO_API_KEY as string || '',
-    listId: import.meta.env.VITE_BREVO_LIST_ID as string || '',
-  },
   formspree: {
     id: import.meta.env.VITE_FORMSPREE_ID as string || '',
   },
