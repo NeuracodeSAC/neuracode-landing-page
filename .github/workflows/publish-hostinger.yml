@@ -43,5 +43,9 @@ jobs:
           cp -R "$artifact_dir"/. .
           touch .nojekyll
           git add -A
+          if git diff --cached --quiet; then
+            echo "Published artifact is unchanged; no deployment commit is needed."
+            exit 0
+          fi
           git commit -m "chore: publish Hostinger artifact from ${GITHUB_SHA}"
           git push origin HEAD:hostinger-production
