@@ -3,6 +3,7 @@ import Card from '../components/Card'
 import Container from '../components/Container'
 import PageMeta from '../components/PageMeta'
 import SectionHeading from '../components/SectionHeading'
+import SectionCTA from '../components/SectionCTA'
 import { consultingExperience, currentWork, engineeringExperience, focusGroupProject, selectedWork, type EvidenceItem } from '../content'
 import { whatsappUrl } from '../config'
 
@@ -12,11 +13,11 @@ const FocusGroupDetail=()=> <div className="focus-detail"><p className="organiza
 export default function Casos() {
   return <><PageMeta path="/casos" title="Casos y Experiencia en IA, Automatización y Software | Neuracode" description="Proyectos, experiencia profesional y trabajo técnico en automatización, agentes, datos, software empresarial y Secure / Agentic SDLC." />
     <section className="page-hero"><Container><p className="eyebrow">Proyectos y experiencia</p><h1>Problemas reales. Sistemas reales. Trabajo aplicado.</h1><p>Automatización, software, datos y sistemas de IA para problemas que requieren integración, evaluación y operación.</p></Container></section>
-    <section className="section"><Container><SectionHeading eyebrow="Proyecto cuantificado" title={focusGroupProject.title}/><FocusGroupDetail/></Container></section>
-    <section className="section section-tint"><Container><SectionHeading eyebrow="Engagements actuales" title="Sistemas que se están construyendo hoy." description="Automatización y agentes aplicados a operaciones, con alcance técnico definido por cada contexto."/><Grid items={currentWork}/></Container></section>
-    <section className="section"><Container><SectionHeading eyebrow="Experiencia profesional" title="Ingeniería, arquitectura, datos y seguridad."/><Grid items={engineeringExperience}/></Container></section>
-    <section className="section section-tint"><Container><SectionHeading eyebrow="Proyectos de consultoría" title="Datos, forecasting y automatización de lenguaje."/><Grid items={consultingExperience}/></Container></section>
-    <section className="section"><Container><SectionHeading eyebrow="Proyecto técnico público" title="Experimentación reproducible sobre datos públicos."/><Grid items={selectedWork.filter(item=>item.id !== focusGroupProject.id)}/></Container></section>
+    <section className="section"><Container><SectionHeading eyebrow="Proyecto cuantificado" title={focusGroupProject.title}/><FocusGroupDetail/><SectionCTA title="¿Tienes un flujo parecido?" description="Podemos revisar el volumen, costo actual y controles antes de plantear una solución."/></Container></section>
+    <section className="section section-tint"><Container><SectionHeading eyebrow="Engagements actuales" title="Sistemas que se están construyendo hoy." description="Automatización y agentes aplicados a operaciones, con alcance técnico definido por cada contexto."/><Grid items={currentWork}/><SectionCTA title="Conversemos sobre tu contexto operativo." description="La primera conversación sirve para entender la oportunidad y sus límites."/></Container></section>
+    <section className="section"><Container><SectionHeading eyebrow="Experiencia profesional" title="Ingeniería, arquitectura, datos y seguridad."/><Grid items={engineeringExperience}/><SectionCTA title="¿Necesitas conectar IA con software existente?" description="Revisemos integraciones, datos, seguridad y continuidad antes de construir."/></Container></section>
+    <section className="section section-tint"><Container><SectionHeading eyebrow="Proyectos de consultoría" title="Datos, forecasting y automatización de lenguaje."/><Grid items={consultingExperience}/><SectionCTA title="Aterricemos el caso de negocio." description="Agendemos una conversación para explorar proceso, datos y resultado esperado."/></Container></section>
+    <section className="section"><Container><SectionHeading eyebrow="Proyecto técnico público" title="Experimentación reproducible sobre datos públicos."/><Grid items={selectedWork.filter(item=>item.id !== focusGroupProject.id)}/><SectionCTA title="¿Quieres pasar de la exploración a una iniciativa real?" description="Definimos un primer paso concreto para tu equipo o producto."/></Container></section>
     <section className="cta"><Container><h2>¿Tienes un proceso parecido?</h2><p>Podemos empezar por entender el proceso, el costo actual y qué debería cambiar antes de elegir una arquitectura.</p><Button href={whatsappUrl('proyecto')} target="_blank" rel="noreferrer">Evaluar una oportunidad</Button></Container></section>
   </>
 }
