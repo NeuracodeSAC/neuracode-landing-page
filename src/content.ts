@@ -15,10 +15,10 @@ export const offers = [
   { name: 'Corporate AI Enablement', outcome: 'Talleres y formación práctica para equipos mediante Academy.' },
 ]
 
-export const buyerScenarios = ['Quiero automatizar este proceso con IA.', 'Ya usamos Claude u OpenAI y no sabemos cómo integrarlo bien.', 'Tenemos datos o Power BI y queremos análisis, forecasting o automatización.', 'Necesitamos un agente que use herramientas y datos internos.', 'Tenemos software existente y queremos incorporar IA sin rehacer todo.', 'Nuestro equipo ya usa AI Coding y necesitamos controles y medición.']
+export const buyerScenarios = ['Quiero automatizar un proceso con IA.', 'Ya usamos Claude u OpenAI y queremos integrarlo bien.', 'Tenemos datos y reporting —por ejemplo en Power BI— y queremos análisis, forecasting o automatización.', 'Necesitamos un agente que trabaje con herramientas y datos internos.', 'Tenemos software existente y queremos incorporar IA sin rehacer todo.', 'Nuestro equipo ya usa AI Coding y necesita controles y medición.']
 
-export const primaryEcosystems = ['Anthropic / Claude', 'OpenAI / Codex', 'Google Vertex AI', 'AWS Bedrock']
-export const technicalEcosystems = ['LangChain', 'LangGraph', 'MCP', 'RAG', 'Tools', 'Agentic Workflows', 'HITL / Evals']
+export const primaryEcosystems = ['Anthropic / Claude', 'OpenAI / Codex', 'Google Cloud / Vertex AI', 'AWS / Bedrock']
+export const technicalEcosystems = ['LangChain', 'LangGraph', 'MCP', 'RAG', 'Tool / function calling', 'Agentic Workflows', 'HITL', 'Evals']
 
 export type EvidenceItem = { id: string; title: string; label: string; organization?: string; summary: string; tags: string[]; url?: string; metrics?: string[] }
 
@@ -31,6 +31,9 @@ export const professionalExperience: EvidenceItem[] = [
   { id: 'sdc-learning', title: 'Instructor de Agentes de Inteligencia Artificial', organization: 'SDC Learning', label: 'Experiencia docente', summary: 'Formación a profesionales en arquitecturas LLM, sistemas agénticos y aplicación práctica de IA.', tags: ['LLMs', 'Agentic Systems', 'AI Enablement'] },
   { id: 'neuracode', title: 'Neuracode', organization: 'Neuracode', label: 'Cofundador', summary: 'Desarrollo de la práctica de Enterprise y Academy alrededor de IA, automatización, software y formación técnica.', tags: ['AI Automation', 'Enterprise', 'Academy'] },
 ]
+
+export const engineeringExperience = professionalExperience.filter(({ id }) => ['atlantic-city', 'caja-metropolitana', 'sdc-consulting'].includes(id))
+export const authorityExperience = professionalExperience.filter(({ id }) => ['sdc-learning', 'neuracode'].includes(id))
 
 export const selectedWork: EvidenceItem[] = [focusGroupProject, { id: 'forensis', title: 'FORENSIS — pipeline agéntico sobre datos públicos', organization: 'Neuracode', label: 'Proyecto técnico público', summary: 'Pipeline de siete agentes con extracción, validación estadística, red-team, narrativa y aprobación humana antes de publicación.', tags: ['Agentic AI', 'Data Engineering', 'HITL'], url: 'https://auditoria.neuracode.dev/' }]
 
@@ -47,7 +50,21 @@ export const currentWork: EvidenceItem[] = [
   { id: 'commerce', title: 'Agente para operaciones comerciales', organization: 'Comercio B2C / importación', label: 'Engagement actual', summary: 'Trabajo actual sobre un agente y automatizaciones para operaciones comerciales y atención al cliente, con escalamiento humano.', tags: ['Agentic Workflows', 'Customer Operations', 'HITL'] },
 ]
 
-export const architectureCapabilities = ['Software Architecture', 'Data Architecture', 'Cloud / Serverless', 'Distributed Systems', 'API Integration', 'Legacy Evolution', 'High Availability', 'Solution Architecture']
+export const architectureCapabilityGroups = [
+  { label: 'Arquitectura', items: ['Software Architecture', 'Data Architecture', 'Cloud / Serverless Architecture', 'Solution Architecture'] },
+  { label: 'Integración y evolución', items: ['API Integration', 'Distributed Systems', 'Legacy Evolution'] },
+  { label: 'Confiabilidad y operación', items: ['High Availability', 'Resilience'] },
+]
+
+export const deliveryStages = [
+  { title: 'Proceso', description: 'Entender el flujo, el problema y el resultado esperado.' },
+  { title: 'Arquitectura', description: 'Definir componentes, límites, datos y puntos de integración.' },
+  { title: 'Integración', description: 'Conectar APIs, datos, herramientas y sistemas existentes.' },
+  { title: 'Piloto', description: 'Probar con alcance controlado y criterios definidos.' },
+  { title: 'Evaluación', description: 'Medir utilidad, calidad, costo, riesgo y retrabajo.' },
+  { title: 'Preparación operativa', description: 'Cerrar observabilidad, hardening, controles y condiciones de producción.' },
+  { title: 'Operación', description: 'Llevar la solución a uso real, observarla y evolucionarla.' },
+]
 export const jackTechnologyGroups = [
   { label: 'Software & APIs', items: ['.NET', 'Python', 'FastAPI', 'Java', 'TypeScript', 'Angular', 'REST APIs', 'Microservices', 'Clean Architecture'] },
   { label: 'Data & Analytics', items: ['PostgreSQL', 'SQL Server', 'ETL', 'Pentaho', 'Power BI', 'Elasticsearch', 'Data Warehouse', 'Data Lake', 'Forecasting', 'ML / NLP'] },

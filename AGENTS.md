@@ -69,6 +69,11 @@ Stop for approval after Gate 1.
 ## Commercial content
 For Jack portfolio, public experience, resources, Academy commercial content and route-level SEO, read `docs/commercial/`.
 
+For public copy, information architecture, commercial layouts, technical capability sections, process diagrams or portfolio taxonomy, also read:
+- `docs/commercial/13_SEMANTIC_COPY_AND_INFORMATION_ARCHITECTURE_RULES.md`.
+
+Do not load that rule set for unrelated CI-only changes.
+
 - Distinguish case study vs professional experience vs current work vs pipeline.
 - Do not render an empty portfolio when publishable professional experience exists.
 - Primary Jack positioning is buyer-readable; technical judgment is demonstrated through evidence, not sold as an abstract slogan.

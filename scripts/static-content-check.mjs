@@ -2,10 +2,23 @@ import { readFile } from 'node:fs/promises'
 
 const assertions = {
   'dist/index.html': ['Integramos IA en'],
-  'dist/jack-aguilar/index.html': ['Jack Aguilar', 'Software Engineer', 'Software Architecture', 'Google Vertex AI'],
+  'dist/jack-aguilar/index.html': [
+    'Jack Aguilar',
+    'Software Engineer',
+    'La IA empresarial funciona',
+    'Preparación operativa',
+    'Software Architecture',
+    'Resilience',
+    'Google Vertex AI',
+  ],
   'dist/casos/index.html': ['50 entrevistas', 'Google Vertex AI', 'Forecasting de demanda', 'Automatización NLP'],
   'dist/academy/index.html': ['Formación práctica en IA', 'SDC Learning'],
   'dist/recursos/index.html': ['FORENSIS'],
+}
+
+const exclusions = {
+  // SDC Learning is authority/teaching evidence, never an engineering case study.
+  'dist/casos/index.html': ['SDC Learning'],
 }
 
 let failed = false
@@ -14,6 +27,16 @@ for (const [file, terms] of Object.entries(assertions)) {
   for (const term of terms) {
     if (!html.includes(term)) {
       console.error(`${file}: missing required content: ${term}`)
+      failed = true
+    }
+  }
+}
+
+for (const [file, terms] of Object.entries(exclusions)) {
+  const html = await readFile(file, 'utf8')
+  for (const term of terms) {
+    if (html.includes(term)) {
+      console.error(`${file}: contains excluded content: ${term}`)
       failed = true
     }
   }

@@ -159,15 +159,17 @@ Software/data:
 
 Do not show every stack item in the hero.
 
-## Section 6 — Build · Research · Teach
+## Section 6 — Implement · Enable · Teach
 
-Replace the current thin phrase with evidence:
+The current semantic architecture supersedes the earlier Build · Research · Teach
+wording. Keep the section grounded in visible, attributable evidence and use this
+copy hierarchy:
 
-### Build
+### Implement
 Software, data and AI systems across regulated and enterprise environments.
 
-### Research
-Current work around AI adoption in SDLC, agentic systems, evaluation, TCO/ROI, security and governance.
+### Enable
+Implementation experience that informs teams, workshops and practical learning.
 
 ### Teach
 Instructor of AI Agents at SDC Learning plus Neuracode Academy/workshops.
