@@ -12,6 +12,14 @@ GSAP is allowed for:
 
 Use CSS/native transitions for simple states.
 
+### Conversational-card motion
+For representative-message or buyer-scenario sequences:
+- use short staggered opacity/translate entries to establish reading order;
+- use subtle hover elevation only where a pointer exists;
+- animate only `transform` and `opacity`;
+- never represent animation as proof of a client conversation or testimonial;
+- disable non-essential motion under `prefers-reduced-motion` without hiding content.
+
 ### Brand motion constraint
 Animate logo containers only. Do not morph, skew, recolor, continuously rotate/pulse, or otherwise distort Neuracode/vendor logos. The logo itself is identity, not motion decoration.
 

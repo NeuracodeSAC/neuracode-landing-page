@@ -93,6 +93,15 @@ Technology names may be surfaced as text chips.
 Vendor logos are optional and require official-source/trademark verification.
 Never label technology logos as “partners” unless an actual partnership exists.
 
+## Conversational conversion pattern
+Approved by the human on 2026-08-17 for the commercial site:
+- Prefer a short, buyer-readable narrative over dense inventories of technology chips.
+- When a section describes buyer situations, present them as **representative messages** or starting points, never as fabricated client testimonials or attributed quotes.
+- Use visual message/card sequences to make a commercial story easy to scan; a concise Neuracode response may connect those messages to the next step.
+- Each meaningful commercial section should offer one contextual next action. Default action: **“Agendar una conversación”** through the governed business WhatsApp flow, until a verified scheduling URL is approved.
+- Keep calls to action proportional: one clear CTA per value block, not repeated buttons inside every card.
+- Use blue/violet accents selectively to guide attention. Preserve calm white space, contrast and enterprise credibility.
+
 ## Typography
 Before changing fonts:
 - inspect current loading/assets/licensing;
