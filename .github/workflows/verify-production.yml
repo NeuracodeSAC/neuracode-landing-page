@@ -19,7 +19,7 @@ jobs:
         run: |
           set -euo pipefail
 
-          for attempt in {1..12}; do
+          for attempt in {1..18}; do
             # Hostinger serves this website over IPv4; forcing it avoids an
             # intermittent IPv6 connection timeout on hosted CI runners.
             apex_headers="$(curl --ipv4 --silent --show-error --connect-timeout 8 --max-time 20 --dump-header - --output /dev/null -A 'Mozilla/5.0' https://neuracode.dev || true)"
@@ -27,19 +27,29 @@ jobs:
             apex_location="$(printf '%s\n' "$apex_headers" | awk 'BEGIN {IGNORECASE=1} /^location:/ {print $2}' | tr -d '\r')"
             www_status="$(curl --ipv4 --silent --show-error --connect-timeout 8 --max-time 20 --output /dev/null --write-out '%{http_code}' -A 'Mozilla/5.0' https://www.neuracode.dev || true)"
 
-            jack_html="$(curl --ipv4 --silent --show-error --connect-timeout 8 --max-time 20 -A 'Mozilla/5.0' https://www.neuracode.dev/jack-aguilar || true)"
-            casos_html="$(curl --ipv4 --silent --show-error --connect-timeout 8 --max-time 20 -A 'Mozilla/5.0' https://www.neuracode.dev/casos || true)"
-            academy_html="$(curl --ipv4 --silent --show-error --connect-timeout 8 --max-time 20 -A 'Mozilla/5.0' https://www.neuracode.dev/academy || true)"
-            recursos_html="$(curl --ipv4 --silent --show-error --connect-timeout 8 --max-time 20 -A 'Mozilla/5.0' https://www.neuracode.dev/recursos || true)"
+            # Hostinger normalizes prerendered routes to a trailing slash. Follow
+            # that redirect so this verifies the rendered document, not the 301 page.
+            jack_html="$(curl --ipv4 --location --silent --show-error --connect-timeout 8 --max-time 20 -A 'Mozilla/5.0' https://www.neuracode.dev/jack-aguilar || true)"
+            casos_html="$(curl --ipv4 --location --silent --show-error --connect-timeout 8 --max-time 20 -A 'Mozilla/5.0' https://www.neuracode.dev/casos || true)"
+            academy_html="$(curl --ipv4 --location --silent --show-error --connect-timeout 8 --max-time 20 -A 'Mozilla/5.0' https://www.neuracode.dev/academy || true)"
+            recursos_html="$(curl --ipv4 --location --silent --show-error --connect-timeout 8 --max-time 20 -A 'Mozilla/5.0' https://www.neuracode.dev/recursos || true)"
+
+            jack_ok=false
+            casos_ok=false
+            academy_ok=false
+            recursos_ok=false
+            [[ "$jack_html" == *"Software Engineer"* ]] && jack_ok=true
+            [[ "$casos_html" == *"50 entrevistas"* ]] && casos_ok=true
+            [[ "$academy_html" == *"Formación práctica"* ]] && academy_ok=true
+            [[ "$recursos_html" == *"FORENSIS"* ]] && recursos_ok=true
 
             if [[ "$apex_status" == "301" && "$apex_location" == "https://www.neuracode.dev/" && "$www_status" == "200" \
-              && "$jack_html" == *"Software Engineer"* && "$casos_html" == *"50 entrevistas"* \
-              && "$academy_html" == *"Formación práctica"* && "$recursos_html" == *"FORENSIS"* ]]; then
+              && "$jack_ok" == true && "$casos_ok" == true && "$academy_ok" == true && "$recursos_ok" == true ]]; then
               echo "Production checks passed on attempt $attempt."
               exit 0
             fi
 
-            echo "Attempt $attempt: apex=$apex_status location=$apex_location www=$www_status"
+            echo "Attempt $attempt: apex=$apex_status location=$apex_location www=$www_status jack_ok=$jack_ok casos_ok=$casos_ok academy_ok=$academy_ok recursos_ok=$recursos_ok"
             sleep 10
           done
 
