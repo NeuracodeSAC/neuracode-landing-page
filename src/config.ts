@@ -9,7 +9,7 @@ const messages: Record<ContactIntent, string> = {
 }
 export const whatsappUrl = (intent: ContactIntent = 'proyecto') => `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(messages[intent])}`
 export const config = {
-  brand: { company: 'Neuracode', academy: 'Neuracode Academy', tagline: 'IA, automatización y software con criterio.', logoSrc: '/logo-neuracode-horizontal.png', isologoSrc: '/isologo-neuracode.png', email: 'contact@neuracode.dev' },
+  brand: { company: 'Neuracode', academy: 'Neuracode Academy', tagline: 'IA, automatización y software para empresas.', logoSrc: '/logo-neuracode-horizontal.png', isologoSrc: '/isologo-neuracode.png', email: 'contact@neuracode.dev' },
   socials: {
     neuracode: [
       { label: 'LinkedIn', url: 'https://www.linkedin.com/company/neuracodelatam/' },

@@ -27,7 +27,14 @@ jobs:
             apex_location="$(printf '%s\n' "$apex_headers" | awk 'BEGIN {IGNORECASE=1} /^location:/ {print $2}' | tr -d '\r')"
             www_status="$(curl --ipv4 --silent --show-error --connect-timeout 8 --max-time 20 --output /dev/null --write-out '%{http_code}' -A 'Mozilla/5.0' https://www.neuracode.dev || true)"
 
-            if [[ "$apex_status" == "301" && "$apex_location" == "https://www.neuracode.dev/" && "$www_status" == "200" ]]; then
+            jack_html="$(curl --ipv4 --silent --show-error --connect-timeout 8 --max-time 20 -A 'Mozilla/5.0' https://www.neuracode.dev/jack-aguilar || true)"
+            casos_html="$(curl --ipv4 --silent --show-error --connect-timeout 8 --max-time 20 -A 'Mozilla/5.0' https://www.neuracode.dev/casos || true)"
+            academy_html="$(curl --ipv4 --silent --show-error --connect-timeout 8 --max-time 20 -A 'Mozilla/5.0' https://www.neuracode.dev/academy || true)"
+            recursos_html="$(curl --ipv4 --silent --show-error --connect-timeout 8 --max-time 20 -A 'Mozilla/5.0' https://www.neuracode.dev/recursos || true)"
+
+            if [[ "$apex_status" == "301" && "$apex_location" == "https://www.neuracode.dev/" && "$www_status" == "200" \
+              && "$jack_html" == *"Software Engineer"* && "$casos_html" == *"50 entrevistas"* \
+              && "$academy_html" == *"Formación práctica"* && "$recursos_html" == *"FORENSIS"* ]]; then
               echo "Production checks passed on attempt $attempt."
               exit 0
             fi
