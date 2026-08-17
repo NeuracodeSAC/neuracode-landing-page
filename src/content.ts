@@ -26,7 +26,7 @@ export const focusGroupProject: EvidenceItem = { id: 'focus-group', title: 'Auto
 
 export const professionalExperience: EvidenceItem[] = [
   { id: 'atlantic-city', title: 'Ingeniería de software en entorno regulado', organization: 'Atlantic City Casino & Sports', label: 'Experiencia profesional actual', summary: 'Software engineering en un entorno empresarial regulado, trabajando en arquitectura de software, cloud y datos, hardening de aplicaciones y evolución del SDLC, incluyendo adopción gobernada de AI Coding.', tags: ['Enterprise Software', 'Software Architecture', 'AWS / Cloud', 'Secure SDLC', 'AI Coding'] },
-  { id: 'caja-metropolitana', title: 'Backend Java e integración en banca regulada', organization: 'Caja Metropolitana de Lima', label: 'Experiencia profesional', summary: 'Backend Java, arquitectura e integraciones para sistemas financieros: Spring Boot, APIs REST/OpenAPI, HSM, transferencias inmediatas, autenticación biométrica, resiliencia y continuidad.', tags: ['Java', 'Spring Boot', 'APIs', 'HSM', 'Distributed Systems', 'Security'] },
+  { id: 'caja-metropolitana', title: 'Backend Java, .NET e integración en banca regulada', organization: 'Caja Metropolitana de Lima', label: 'Experiencia profesional', summary: 'Backend Java y .NET, arquitectura e integraciones para sistemas financieros: Spring Boot, APIs REST/OpenAPI, HSM, transferencias inmediatas, autenticación biométrica, resiliencia y continuidad.', tags: ['Java', 'Spring Boot', '.NET', 'APIs', 'HSM', 'Distributed Systems', 'Security'] },
   { id: 'sdc-consulting', title: 'Software, datos e IA aplicada en consultoría', organization: 'SDC Consulting', label: 'Experiencia de consultoría', summary: 'Backend y full-stack en sistemas estratégicos, además de datos, analítica, arquitectura, forecasting, NLP y automatización para distintos sectores.', tags: ['Java', 'Angular', 'Power BI', 'ML / NLP', 'Data Architecture'] },
   { id: 'sdc-learning', title: 'Instructor de Agentes de Inteligencia Artificial', organization: 'SDC Learning', label: 'Experiencia docente', summary: 'Formación a profesionales en arquitecturas LLM, sistemas agénticos y aplicación práctica de IA.', tags: ['LLMs', 'Agentic Systems', 'AI Enablement'] },
   { id: 'neuracode', title: 'Neuracode', organization: 'Neuracode', label: 'Cofundador', summary: 'Desarrollo de la práctica de Enterprise y Academy alrededor de IA, automatización, software y formación técnica.', tags: ['AI Automation', 'Enterprise', 'Academy'] },
@@ -66,9 +66,9 @@ export const deliveryStages = [
   { title: 'Operación', description: 'Llevar la solución a uso real, observarla y evolucionarla.' },
 ]
 export const jackTechnologyGroups = [
-  { label: 'Software & APIs', items: ['.NET', 'Python', 'FastAPI', 'Java', 'Spring Boot', 'Spring WebFlux', 'TypeScript', 'Angular', 'REST APIs', 'Microservices', 'Clean Architecture'] },
+  { label: 'Software & APIs', items: ['Java', 'Spring Boot', 'Spring WebFlux', '.NET', 'Python', 'FastAPI', 'TypeScript', 'Angular', 'REST APIs', 'Microservices', 'Clean Architecture'] },
   { label: 'Data & Analytics', items: ['PostgreSQL', 'SQL Server', 'ETL', 'Pentaho', 'Power BI', 'Elasticsearch', 'Data Warehouse', 'Data Lake', 'Forecasting', 'ML / NLP'] },
-  { label: 'Cloud, Security & Delivery', items: ['AWS', 'Docker', 'OAuth2 / JWT', 'OWASP', 'HSM', 'CI/CD', 'Secure SDLC'] },
+  { label: 'Cloud, Security & Delivery', items: ['Azure', 'Azure DevOps', 'AWS', 'Docker', 'OAuth2 / JWT', 'OWASP', 'HSM', 'CI/CD', 'Secure SDLC'] },
   { label: 'AI & Agentic', items: ['Anthropic / Claude', 'OpenAI / Codex', 'Google Vertex AI', 'AWS Bedrock', 'LangGraph', 'MCP', 'RAG', 'Tools / Skills', 'HITL', 'Evals'] },
 ]
 
